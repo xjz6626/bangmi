@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的追番管理面板</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>我的追番管理面板</h1>
+        <button id="save-button" onclick="saveWatchlist()">保存追番列表</button>
+    </header>
+
+    <main id="anime-list-container">
+        <p>正在加载新番列表中...</p>
+    </main>
+
+    <script>
+        // 1. (不变) 页面加载时, 立即获取数据
+        window.onload = function() {
+            fetch('/api/data')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert("加载数据失败: " + data.error);
+                        document.getElementById('anime-list-container').innerHTML = `<p style="color:red;">${data.error}</p>`;
+                        return;
+                    }
+                    renderAnimeList(data.grouped_anime, data.current_watchlist, data.weekdays_order);
+                })
+                .catch(err => {
+                    console.error("Fetch error:", err);
+                    alert("加载数据失败，请检查 app.py 服务器是否正在运行。");
+                });
+        };
+
+        // 2. (修改) 将数据渲染为 HTML
+        function renderAnimeList(groupedAnime, watchlist, weekdays_order) {
+            const container = document.getElementById('anime-list-container');
+            container.innerHTML = ''; // 清空"加载中"提示
+
+            // (修改) 外层循环: 遍历周几 (按顺序)
+            weekdays_order.forEach(day => {
+                const animeForThisDay = groupedAnime[day];
+                
+                // (新) 1. 创建竖向的 "天" 列
+                const dayColumn = document.createElement('div');
+                dayColumn.className = 'day-column';
+                
+                // (新) 2. 创建周几的标题
+                const heading = document.createElement('h2');
+                heading.className = 'day-heading';
+                heading.textContent = `${day} (共 ${animeForThisDay.length} 部)`;
+                dayColumn.appendChild(heading);
+
+                // (新) 3. 创建该列中用于存放卡片的列表
+                const cardList = document.createElement('div');
+                cardList.className = 'card-list';
+
+                // (修改) 内层循环: 遍历当天的所有番剧, 并创建卡片
+                animeForThisDay.forEach(anime => {
+                    const isChecked = watchlist.includes(anime.primary_title);
+                    
+                    const card = document.createElement('div');
+                    card.className = 'anime-card';
+                    
+                    const broadcastTime = `(${anime.begin_time} JST)`;
+
+                    card.innerHTML = `
+                        <input 
+                            type="checkbox" 
+                            id="${anime.primary_title}" 
+                            value="${anime.primary_title}"
+                            ${isChecked ? 'checked' : ''}
+                        >
+                        <label for="${anime.primary_title}">
+                            <span class="title">${anime.primary_title}</span>
+                            <span class="broadcast-time">${broadcastTime}</span>
+                        </label>
+                    `;
+                    // (修改) 将卡片添加到竖向的 cardList 中
+                    cardList.appendChild(card);
+                });
+                
+                // (修改) 将卡片列表添加到 "天" 列中
+                dayColumn.appendChild(cardList);
+                // (修改) 将 "天" 列添加到主容器中
+                container.appendChild(dayColumn);
+            });
+        }
+        
+        // 3. (不变) 保存按钮的点击事件
+        function saveWatchlist() {
+            const button = document.getElementById('save-button');
+            button.disabled = true;
+            button.textContent = '保存中...';
+
+            const allCheckboxes = document.querySelectorAll('.anime-card input[type="checkbox"]');
+            const selectedTitles = [];
+            
+            allCheckboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    selectedTitles.push(checkbox.value);
+                }
+            });
+
+            // 4. (不变) 将勾选的列表发送回 Python 服务器
+            fetch('/api/save_watchlist', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ selected_titles: selectedTitles }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(data.message);
+                } else {
+                    alert('保存失败: ' + data.error);
+                }
+                button.disabled = false;
+                button.textContent = '保存追番列表';
+            })
+            .catch(err => {
+                console.error("Save error:", err);
+                alert("保存失败，请检查 app.py 服务器。");
+                button.disabled = false;
+                button.textContent = '保存追番列表';
+            });
+        }
+    </script>
+</body>
+</html>

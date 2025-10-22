@@ -1,0 +1,14 @@
+anime/
+*.mp4
+*.mkv
+*.log
+scheduler.log
+search_results.json
+download_history.json
+config.json
+config.json.local
+__pycache__/
+*.pyc
+.env
+.vscode/
+.idea/

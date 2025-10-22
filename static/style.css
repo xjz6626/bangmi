@@ -1,0 +1,146 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    color: #333;
+    /* (新) 允许在 body 级别横向滚动 */
+    overflow-x: auto;
+    /* (新) 确保内容不会被意外截断 */
+    min-width: 100vw; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+    /* (新) 头部固定在顶部 */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1 {
+    color: #1c1e21;
+    margin: 0;
+}
+
+#save-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    /* (新) 确保按钮不会被压缩 */
+    flex-shrink: 0; 
+}
+
+#save-button:hover {
+    background-color: #0056b3;
+}
+
+#save-button:disabled {
+    background-color: #9dbdf2;
+    cursor: not-allowed;
+}
+
+/* (修改) 主容器现在是横向flex布局 */
+#anime-list-container {
+    display: flex;
+    flex-direction: row; /* 横向排列 */
+    align-items: flex-start; /* 顶部对齐 */
+    gap: 15px;
+    padding: 20px;
+    /* (新) 确保容器足够宽以容纳所有列 */
+    width: max-content; 
+}
+
+/* (新) 每日分组的 "列" 样式 */
+.day-column {
+    width: 340px;
+    flex-shrink: 0; /* 防止列被压缩 */
+    background-color: #ebedf0; /* 浅灰色背景 */
+    border-radius: 8px;
+    /* (新) 限制高度并允许列内部滚动 */
+    max-height: calc(100vh - 120px); /* 视口高度 - 头部 - padding */
+    display: flex;
+    flex-direction: column;
+}
+
+/* (新) 每日标题 (周一, 周二...) 的样式 */
+.day-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1c1e21;
+    padding: 15px;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    /* (新) 标题固定在列的顶部 */
+    position: sticky;
+    top: 0;
+    background-color: #ebedf0;
+    z-index: 10;
+}
+
+/* (新) 卡片的竖向滚动列表 */
+.card-list {
+    display: flex;
+    flex-direction: column; /* 竖向排列卡片 */
+    gap: 10px;
+    padding: 15px;
+    overflow-y: auto; /* 当卡片太多时, 允许列内部滚动 */
+}
+
+/* (修改) 卡片样式 */
+.anime-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.anime-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.anime-card input[type="checkbox"] {
+    margin-right: 15px;
+    transform: scale(1.5);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.anime-card label {
+    display: flex;
+    justify-content: space-between; /* (修改) 标题和时间左右分开 */
+    align-items: center;
+    cursor: pointer;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.anime-card .title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #050505;
+    /* (修改) 确保长标题可以被截断 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px; /* 给时间留出空间 */
+}
+
+.anime-card .broadcast-time {
+    font-size: 0.9rem;
+    color: #65676b;
+    flex-shrink: 0; /* (新) 确保时间不会被压缩 */
+}
