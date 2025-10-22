@@ -1,151 +1,194 @@
-# 🎌 动漫BT下载系统
+🎌 自动追番系统（Bangmi — Bangumi Auto-Downloader）
 
-一个简洁高效的动漫种子搜索下载系统，基于qBittorrent和animes.garden API。
+一个自动化追番工具，按播出时间搜索番剧、通过 Seedr.cc 做云端离线下载并把完成的视频同步到本地。
 
-## 📁 项目结构
+## 核心功能
+
+- 新番拉取：`get_seasonal_anime.py` 从 Bangumi Data 获取指定季度的番剧列表。
+- Web 管理：`app.py` 提供基于 Flask 的管理界面，便于勾选/管理追番。
+- 定时调度：`bangmi_scheduler.py` 作为后台调度器按 JST 定时触发搜索与下载。
+- 智能搜索：`search_torrents.py` 根据播出时间、追番配置和下载历史，筛选并生成下载任务。
+- 云端下载：`download_bt.py` 集成 Seedr.cc（seedrcc），完成磁力 -> 云端 -> 本地的全流程。
+- 历史跟踪：`download_history.json` 记录已下载的最高集数与磁力链接，避免重复下载。
+- 任务队列：`search_results.json` 作为搜索到下载之间的任务队列，支持失败重试。
+
+## 项目结构（简要）
 
 ```
-bangmi/
-├── 🔧 核心脚本
-│   ├── search_torrents.py      # 搜索动漫种子
-│   ├── download_bt.py          # 管理BT下载  
-│   ├── get_seasonal_anime.py   # 获取季度新番
-│   └── app.py                  # Web管理界面
-├── ⚙️ 工具脚本
-│   └── optimize_no_proxy.py    # qBittorrent配置优化
-├── 📄 配置和数据
-│   ├── config.json            # 系统配置
-│   ├── download_history.json  # 下载历史记录
-│   ├── seasonal_anime_list.json # 新番列表
-│   ├── search_results.json    # 搜索结果缓存
-│   └── cookies.txt           # 认证凭据
-├── 🌐 Web资源
-│   ├── templates/            # HTML模板
-│   └── static/              # CSS/JS静态文件
-└── 📦 下载目录
-    └── anime/               # 动漫下载存储
+.
+├── bangmi_scheduler.py        # 调度器（后台运行）
+├── get_seasonal_anime.py      # 获取季度新番列表
+├── app.py                     # Flask Web 管理界面
+├── search_torrents.py         # 智能搜索脚本
+├── download_bt.py             # Seedr 云端下载脚本
+
+├── config.json                # 核心配置（请保密，不提交到仓库）
+├── config.example.json        # 配置示例（提交到仓库）
+├── seasonal_anime_list.json   # 季度番剧数据（脚本生成）
+├── download_history.json      # 下载历史（脚本生成）
+├── search_results.json        # 任务队列（脚本生成）
+├── scheduler.log              # 调度日志（可被忽略）
+
+├── templates/                 # Flask 模板（web UI）
+└── static/                    # 静态资源（CSS 等）
+
+└── anime/                     # 本地下载目录（在 .gitignore 中）
 ```
 
-## 🚀 快速开始
+## 快速开始
 
 ### 1. 安装依赖
-```bash
-# Python依赖
-pip3 install requests flask
 
-# qBittorrent (无界面版)
-sudo dnf install qbittorrent-nox  # Fedora
-# sudo apt install qbittorrent-nox  # Ubuntu/Debian
+推荐使用虚拟环境：
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip3 install requests schedule pytz seedrcc flask
 ```
 
-### 2. 启动qBittorrent
-```bash
-sudo systemctl enable qbittorrent-nox@$USER
-sudo systemctl start qbittorrent-nox@$USER
-```
-Web界面: http://localhost:8080 (admin/adminadmin)
+（如果没有 `requirements.txt`，上面命令会回退为手动安装常用依赖）
 
-### 3. 使用脚本
+### 2. 配置
+
+复制示例配置并编辑：
+
 ```bash
-# 搜索动漫
+cp config.example.json config.json
+# 编辑 config.json，填写 seedr_email / seedr_password 等敏感信息
+```
+
+注意：`config.json` 含有敏感信息，仓库中已将其加入 `.gitignore`，请勿将真实凭据提交到远程。
+
+### 3. 生成季度番剧列表（每季度执行一次）
+
+```bash
+python3 get_seasonal_anime.py
+```
+
+脚本会根据 `config.json` 中的 `target_year` 与 `target_months` 生成 `seasonal_anime_list.json`。
+
+### 4. 使用 Web UI 管理追番（可选）
+
+```bash
+python3 app.py
+```
+
+访问：http://127.0.0.1:5000，勾选要追的番剧并保存。
+
+### 5. 启动调度器（推荐后台运行）
+
+```bash
+nohup python3 bangmi_scheduler.py > scheduler.log 2>&1 &
+```
+
+调度器会在 JST（Asia/Tokyo）按 `TARGET_TIMES_JST` 设定触发 `search_torrents.py` 与 `download_bt.py`。
+
+### 手动运行（调试/测试）
+
+- 手动搜索：
+```bash
 python3 search_torrents.py
-
-# 下载种子
-python3 download_bt.py
-
-# Web界面管理
-python3 app.py  # 访问 http://localhost:5000
 ```
-
-## 🎯 主要功能
-
-- **🔍 智能搜索**: animes.garden API集成，支持中文搜索
-- **📱 Web管理**: 直观的网页界面，支持批量操作
-- **⚡ 自动下载**: 无缝对接qBittorrent，自动管理下载
-- **📊 历史跟踪**: 完整的下载记录和进度监控
-- **🌟 新番追踪**: 自动获取季度新番信息
-- **🔧 性能优化**: 内置优化工具，提升下载效率
-
-## ⚡ 性能优化
-
-如遇下载慢或连接问题：
+- 手动下载队列：
 ```bash
-python3 optimize_no_proxy.py  # 恢复标准协议配置
+python3 download_bt.py
 ```
 
-该工具会：
-- ✅ 启用DHT/PEX/LSD (UDP协议)
-- ✅ 恢复标准BT端口和设置
-- ✅ 重新声明所有种子使用新配置
+## 文件说明（功能概述）
 
-## 📝 配置说明
+- `get_seasonal_anime.py`：拉取并筛选当季度番剧。
+- `app.py`：Flask Web 管理界面，更新 `config.json` 中的 `torrent_searcher.search_config`。
+- `bangmi_scheduler.py`：调度器，负责定时触发搜索与下载。
+- `search_torrents.py`：根据时间窗口和历史生成 `search_results.json` 任务。
+- `download_bt.py`：使用 Seedr 服务上传磁力、等待云端完成并下载到本地，最后清理云端并更新历史记录。
 
-编辑 `config.json` 自定义：
-- BT客户端连接参数
-- 搜索过滤和排序规则
-- 下载路径和文件组织
-- API访问设置
+## 注意事项
 
-## ⚠️ 注意事项
+- Seedr 依赖：下载逻辑强依赖 Seedr.cc（`seedrcc` 库）。当前脚本不会使用 `qbittorrent`/`transmission`/`aria2` 配置块。
+- 隐私与安全：`config.json` 包含凭据，请务必保密。仓库中保留了 `config.example.json` 供他人参考。
+- 时区：系统按 JST（Asia/Tokyo）判断播出时间，请确保时间配置与目标时区一致。
 
-- 请遵守当地法律法规，尊重版权
-- 合理使用网络资源，避免影响他人
-- 定期清理下载文件，管理存储空间
-- 建议配置防火墙端口转发以获得最佳性能
+## 将调度器注册为 systemd 服务（可选，推荐服务器运行）
 
-## 🔧 故障排除
+下面提供两种常见方案：系统级（system service）和用户级（user service）。如果你的服务器供多用户使用或希望开机时自动启动，请使用**系统级**服务；如果你仅以个人用户运行并且不希望修改系统服务，请使用**用户级**服务（需启用 linger 来在无登录时启动）。
 
-**下载无速度?**
-1. 检查qBittorrent服务状态
-2. 运行优化脚本恢复UDP协议
-3. 确认防火墙端口开放
+### 1) 系统级 service（以 root 创建）
 
-**搜索无结果?**
-1. 验证animes.garden网络可达性
-2. 检查搜索关键词是否正确
-3. 尝试不同的搜索条件
+创建一个 system unit（在 `/etc/systemd/system/bangmi.service`）：
 
-**Web界面无法访问?**
-1. 确认Flask应用正常启动
-2. 检查端口5000是否被占用
-3. 验证模板和静态文件完整性
+```ini
+[Unit]
+Description=Bangmi Scheduler
+After=network.target
 
-## 🌐 Web管理界面
+[Service]
+Type=simple
+User=xjz
+WorkingDirectory=/home/xjz/workplace/bangmi
+ExecStart=/usr/bin/env python3 /home/xjz/workplace/bangmi/bangmi_scheduler.py
+Restart=on-failure
+RestartSec=10
 
-### qBittorrent Web UI
-- 地址: http://localhost:8080
-- 用户: admin / adminadmin
-- 功能: 种子管理、下载监控
+[Install]
+WantedBy=multi-user.target
+```
 
-### 项目Web界面  
-- 地址: http://localhost:5000
-- 功能: 搜索、下载历史管理
+保存后执行：
 
-## 📋 脚本说明
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now bangmi.service
+```
 
-### search_torrents.py
-搜索animes.garden上的动漫种子，支持：
-- 关键词搜索
-- 季度新番获取
-- 搜索结果缓存
-- 智能过滤和排序
+检查状态与日志：
 
-### download_bt.py
-管理BT下载，支持：
-- 历史记录批量下载
-- 磁力链接解析和增强
-- qBittorrent API操作
-- 下载进度跟踪
+```bash
+sudo systemctl status bangmi.service
+sudo journalctl -u bangmi.service -n 200 --no-pager
+```
 
-### get_seasonal_anime.py
-获取季度动漫信息，支持：
-- 自动获取当季新番
-- 动漫信息缓存
-- 多语言标题处理
+### 2) 用户级 service（无需 root，但需开启 linger）
 
-### optimize_no_proxy.py
-qBittorrent性能优化工具，功能：
-- 协议配置恢复
-- 网络设置优化
-- Tracker管理
-- 连接诊断
+在 `~/.config/systemd/user` 下创建 `bangmi.service`：
+
+```ini
+[Unit]
+Description=Bangmi Scheduler (user)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/xjz/workplace/bangmi
+ExecStart=/usr/bin/env python3 /home/xjz/workplace/bangmi/bangmi_scheduler.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
+```
+
+启用并启动：
+
+```bash
+systemctl --user daemon-reload
+systemctl --user enable --now bangmi.service
+# 如果希望在未登录时也能运行（允许 user services 在没有交互登录时启动）
+sudo loginctl enable-linger $USER
+```
+
+查看日志：
+
+```bash
+journalctl --user -u bangmi.service -n 200 --no-pager
+```
+
+### 常见问题与建议
+
+- 如果脚本依赖虚拟环境，修改 `ExecStart` 指向虚拟环境中的 python：
+	`/home/xjz/workplace/bangmi/.venv/bin/python /home/xjz/workplace/bangmi/bangmi_scheduler.py`
+- 请确保 `User` 的权限可以访问 `anime/` 目录和其他相关文件。可通过 `chown -R xjz:xjz /home/xjz/workplace/bangmi/anime` 设置文件所有权。
+- 使用 `Restart=on-failure` 可以在脚本崩溃时自动重启；若需要更强的保护可用 `Restart=always`。
+
+
+
