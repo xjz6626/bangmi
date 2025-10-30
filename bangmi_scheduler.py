@@ -57,12 +57,44 @@ def run_script(script_path):
             text=True,
             encoding='utf-8'
         )
+        
         # 记录子脚本的标准输出
         if process.stdout:
             print_log(f"--- {script_name} 输出 ---")
-            # 逐行记录，避免日志格式混乱
+            
+            # --- *** 修改处：过滤下载脚本的日志 V2 *** ---
+            is_download_script = (script_path == DOWNLOAD_SCRIPT)
+            
+            # 状态标志，用于只记录一次 0% 和 100%
+            has_logged_start = False
+            has_logged_completion = False
+
             for line in process.stdout.splitlines():
-                print_log(f"  {line}")
+                log_this_line = True  # 默认记录所有行
+
+                if is_download_script and "进度:" in line:
+                    # 如果是下载脚本，并且是进度行
+                    
+                    # 检查是否为 0% 进度
+                    # (增加 " 0%" 兼容性)
+                    if (" 0.0%" in line or " 0%" in line) and not has_logged_start:
+                        log_this_line = True
+                        has_logged_start = True # 标记已记录
+                    
+                    # 检查是否为 100% 进度
+                    # (增加 "100%" 兼容性)
+                    elif ("100.0%" in line or "100%" in line) and not has_logged_completion:
+                        log_this_line = True
+                        has_logged_completion = True # 标记已记录
+                    
+                    # 其他所有进度行 (非0%, 非100%, 或重复的0/100)
+                    else:
+                        log_this_line = False # 不记录
+                
+                if log_this_line:
+                    print_log(f"  {line}")
+            # --- *** 修改结束 *** ---
+
             print_log(f"--- {script_name} 输出结束 ---")
 
         print_log(f"子脚本 '{script_name}' 执行成功。", level="SUCCESS")
@@ -186,3 +218,4 @@ if __name__ == "__main__":
     except Exception as e:
         print_log(f"====== 🔥 调度器发生严重错误: {e} ======", level="CRITICAL")
         traceback.print_exc()
+
