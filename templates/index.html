@@ -9,16 +9,158 @@
 <body>
     <header>
         <h1>我的追番管理面板</h1>
-        <button id="save-button" onclick="saveWatchlist()">保存追番列表</button>
+        <div class="header-buttons">
+            <button id="refresh-seasonal-button" onclick="refreshSeasonal()">刷新当季新番</button>
+            <button id="use-bangumi-button" onclick="useBangumiData()">使用Bangumi数据</button>
+            <button id="search-morning-button" onclick="searchTorrents()">执行搜索</button>
+            <button id="download-button" onclick="startDownload()">启动下载</button>
+            <button id="toggle-log-button" onclick="toggleLogViewer()">查看日志</button>
+            <button id="save-button" onclick="saveWatchlist()">保存追番列表</button>
+        </div>
     </header>
+
+    <!-- 日志查看器 (默认隐藏) -->
+    <div id="log-viewer" class="log-viewer hidden">
+        <div class="log-header">
+            <h3>系统日志</h3>
+            <div class="log-controls">
+                <button onclick="refreshLogs()">刷新日志</button>
+                <button onclick="clearLogDisplay()">清空显示</button>
+                <button onclick="toggleLogViewer()">关闭</button>
+            </div>
+        </div>
+        <pre id="log-content">加载中...</pre>
+    </div>
+
+    <!-- 搜索关键词编辑器 (默认隐藏) -->
+    <div id="search-keys-editor" class="modal hidden">
+        <div class="modal-content">
+            <h3>编辑搜索关键词</h3>
+            <p>番剧: <strong id="editor-anime-title"></strong></p>
+            <div id="search-keys-inputs"></div>
+            <button onclick="addSearchKeyInput()">+ 添加关键词</button>
+            <div class="modal-buttons">
+                <button onclick="saveSearchKeys()">保存</button>
+                <button onclick="closeSearchKeysEditor()">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 番剧详情查看器 (默认隐藏) -->
+    <div id="anime-detail-viewer" class="modal hidden">
+        <div class="modal-content anime-detail large-modal">
+            <div class="detail-header">
+                <h3 id="detail-title">番剧详情</h3>
+                <button class="close-btn" onclick="closeAnimeDetail()">✕</button>
+            </div>
+            <div class="detail-body">
+                <div class="detail-left">
+                    <img id="detail-cover" src="" alt="封面">
+                    <div class="detail-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">评分:</span>
+                            <span class="stat-value" id="detail-rating">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">排名:</span>
+                            <span class="stat-value" id="detail-rank">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">集数:</span>
+                            <span class="stat-value" id="detail-eps">-</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-right">
+                    <div class="detail-info">
+                        <p><strong>日文名:</strong> <span id="detail-jp-name">-</span></p>
+                        <p><strong>放送日期:</strong> <span id="detail-air-date">-</span></p>
+                        <p><strong>官网:</strong> <a id="detail-site" href="#" target="_blank">查看</a></p>
+                        <p><strong>Bangumi ID:</strong> <span id="detail-bangumi-id">-</span></p>
+                    </div>
+                    <div class="detail-summary">
+                        <h4>简介</h4>
+                        <p id="detail-summary-text">暂无简介</p>
+                    </div>
+                    <div class="detail-collection">
+                        <h4>收藏统计</h4>
+                        <div class="collection-stats">
+                            <span>想看: <strong id="detail-wish">0</strong></span>
+                            <span>在看: <strong id="detail-doing">0</strong></span>
+                            <span>看过: <strong id="detail-collect">0</strong></span>
+                            <span>搁置: <strong id="detail-hold">0</strong></span>
+                            <span>抛弃: <strong id="detail-drop">0</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 标签页导航 -->
+            <div class="detail-tabs">
+                <button class="tab-btn active" onclick="switchTab('episodes')">章节列表</button>
+                <button class="tab-btn" onclick="switchTab('characters')">角色声优</button>
+                <button class="tab-btn" onclick="switchTab('staff')">制作人员</button>
+                <button class="tab-btn" onclick="switchTab('relations')">关联条目</button>
+                <button class="tab-btn" onclick="switchTab('topics')">讨论区</button>
+                <button class="tab-btn" onclick="switchTab('comments')">用户评论</button>
+            </div>
+            
+            <!-- 标签页内容 -->
+            <div class="detail-tabs-content">
+                <!-- 章节列表 -->
+                <div id="tab-episodes" class="tab-content active">
+                    <div class="loading" id="episodes-loading">加载中...</div>
+                    <div id="episodes-list" class="episodes-list"></div>
+                </div>
+                
+                <!-- 角色声优 -->
+                <div id="tab-characters" class="tab-content">
+                    <div class="loading" id="characters-loading">加载中...</div>
+                    <div id="characters-list" class="characters-list"></div>
+                </div>
+                
+                <!-- 制作人员 -->
+                <div id="tab-staff" class="tab-content">
+                    <div class="loading" id="staff-loading">加载中...</div>
+                    <div id="staff-list" class="staff-list"></div>
+                </div>
+                
+                <!-- 关联条目 -->
+                <div id="tab-relations" class="tab-content">
+                    <div class="loading" id="relations-loading">加载中...</div>
+                    <div id="relations-list" class="relations-list"></div>
+                </div>
+                
+                <!-- 讨论区 -->
+                <div id="tab-topics" class="tab-content">
+                    <div class="loading" id="topics-loading">加载中...</div>
+                    <div id="topics-list" class="topics-list"></div>
+                </div>
+                
+                <!-- 用户评论 -->
+                <div id="tab-comments" class="tab-content">
+                    <div class="loading" id="comments-loading">加载中...</div>
+                    <div id="comments-list" class="comments-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main id="anime-list-container">
         <p>正在加载新番列表中...</p>
     </main>
 
     <script>
-        // 1. (不变) 页面加载时, 立即获取数据
+        let currentSearchConfig = {}; // 存储当前的搜索配置
+        let currentEditingAnime = null; // 当前正在编辑的番剧
+
+        // 1. 页面加载时, 立即获取数据
         window.onload = function() {
+            loadData();
+            loadSearchConfig();
+        };
+
+        function loadData() {
             fetch('/api/data')
                 .then(response => response.json())
                 .then(data => {
@@ -33,32 +175,43 @@
                     console.error("Fetch error:", err);
                     alert("加载数据失败，请检查 app.py 服务器是否正在运行。");
                 });
-        };
+        }
 
-        // 2. (修改) 将数据渲染为 HTML
+        function loadSearchConfig() {
+            fetch('/api/get_search_config')
+                .then(response => response.json())
+                .then(data => {
+                    currentSearchConfig = data;
+                })
+                .catch(err => {
+                    console.error("获取搜索配置失败:", err);
+                });
+        }
+
+        // 2. 将数据渲染为 HTML
         function renderAnimeList(groupedAnime, watchlist, weekdays_order) {
             const container = document.getElementById('anime-list-container');
             container.innerHTML = ''; // 清空"加载中"提示
 
-            // (修改) 外层循环: 遍历周几 (按顺序)
+            // 外层循环: 遍历周几 (按顺序)
             weekdays_order.forEach(day => {
                 const animeForThisDay = groupedAnime[day];
                 
-                // (新) 1. 创建竖向的 "天" 列
+                // 1. 创建竖向的 "天" 列
                 const dayColumn = document.createElement('div');
                 dayColumn.className = 'day-column';
                 
-                // (新) 2. 创建周几的标题
+                // 2. 创建周几的标题
                 const heading = document.createElement('h2');
                 heading.className = 'day-heading';
                 heading.textContent = `${day} (共 ${animeForThisDay.length} 部)`;
                 dayColumn.appendChild(heading);
 
-                // (新) 3. 创建该列中用于存放卡片的列表
+                // 3. 创建该列中用于存放卡片的列表
                 const cardList = document.createElement('div');
                 cardList.className = 'card-list';
 
-                // (修改) 内层循环: 遍历当天的所有番剧, 并创建卡片
+                // 内层循环: 遍历当天的所有番剧, 并创建卡片
                 animeForThisDay.forEach(anime => {
                     const isChecked = watchlist.includes(anime.primary_title);
                     
@@ -66,31 +219,52 @@
                     card.className = 'anime-card';
                     
                     const broadcastTime = `(${anime.begin_time} JST)`;
+                    
+                    // 显示评分和排名（如果有）
+                    const rating = anime.rating?.score || 'N/A';
+                    const rank = anime.rank || 'N/A';
+                    const hasDetails = anime.bangumi_id || anime.rating || anime.summary;
 
                     card.innerHTML = `
-                        <input 
-                            type="checkbox" 
-                            id="${anime.primary_title}" 
-                            value="${anime.primary_title}"
-                            ${isChecked ? 'checked' : ''}
-                        >
-                        <label for="${anime.primary_title}">
-                            <span class="title">${anime.primary_title}</span>
-                            <span class="broadcast-time">${broadcastTime}</span>
-                        </label>
+                        <div class="anime-card-header">
+                            <input 
+                                type="checkbox" 
+                                id="${anime.primary_title}" 
+                                value="${anime.primary_title}"
+                                ${isChecked ? 'checked' : ''}
+                            >
+                            <label for="${anime.primary_title}">
+                                <span class="title">${anime.primary_title}</span>
+                                <span class="broadcast-time">${broadcastTime}</span>
+                            </label>
+                        </div>
+                        ${hasDetails ? `
+                            <div class="anime-meta">
+                                <span class="meta-item">评分: ${rating}</span>
+                                <span class="meta-item">排名: #${rank}</span>
+                                ${anime.bangumi_id ? `<button class="detail-btn" onclick="showAnimeDetail('${anime.primary_title}')">详情</button>` : ''}
+                            </div>
+                        ` : ''}
+                        ${isChecked ? `<button class="edit-search-btn" onclick="openSearchKeysEditor('${anime.primary_title}')">编辑搜索词</button>` : ''}
                     `;
-                    // (修改) 将卡片添加到竖向的 cardList 中
+                    
                     cardList.appendChild(card);
                 });
                 
-                // (修改) 将卡片列表添加到 "天" 列中
                 dayColumn.appendChild(cardList);
-                // (修改) 将 "天" 列添加到主容器中
                 container.appendChild(dayColumn);
+            });
+            
+            // 保存完整的动画数据供详情查看使用
+            window.allAnimeData = {};
+            weekdays_order.forEach(day => {
+                groupedAnime[day].forEach(anime => {
+                    window.allAnimeData[anime.primary_title] = anime;
+                });
             });
         }
         
-        // 3. (不变) 保存按钮的点击事件
+        // 3. 保存按钮的点击事件
         function saveWatchlist() {
             const button = document.getElementById('save-button');
             button.disabled = true;
@@ -105,7 +279,7 @@
                 }
             });
 
-            // 4. (不变) 将勾选的列表发送回 Python 服务器
+            // 4. 将勾选的列表发送回 Python 服务器
             fetch('/api/save_watchlist', {
                 method: 'POST',
                 headers: {
@@ -117,6 +291,9 @@
             .then(data => {
                 if (data.status === 'success') {
                     alert(data.message);
+                    // 重新加载数据以更新界面
+                    loadData();
+                    loadSearchConfig();
                 } else {
                     alert('保存失败: ' + data.error);
                 }
@@ -129,6 +306,810 @@
                 button.disabled = false;
                 button.textContent = '保存追番列表';
             });
+        }
+
+        // 新增功能：刷新当季新番
+        function refreshSeasonal() {
+            const button = document.getElementById('refresh-seasonal-button');
+            button.disabled = true;
+            button.textContent = '刷新中...';
+
+            fetch('/api/refresh_seasonal', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(data.message);
+                    // 刷新页面数据
+                    loadData();
+                } else {
+                    alert('刷新失败: ' + data.error);
+                }
+                button.disabled = false;
+                button.textContent = '刷新当季新番';
+            })
+            .catch(err => {
+                console.error("Refresh error:", err);
+                alert("刷新失败，请检查服务器。");
+                button.disabled = false;
+                button.textContent = '刷新当季新番';
+            });
+        }
+
+        // 新增功能：执行搜索
+        function searchTorrents() {
+            const button = document.getElementById('search-morning-button');
+            button.disabled = true;
+            button.textContent = '搜索中...';
+
+            fetch('/api/search_torrents', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // 显示完整输出
+                    alert(data.message + '\n\n完整输出:\n' + data.output);
+                } else {
+                    alert('搜索失败: ' + data.error);
+                }
+                button.disabled = false;
+                button.textContent = '执行搜索';
+            })
+            .catch(err => {
+                console.error("Search error:", err);
+                alert("搜索失败，请检查服务器。");
+                button.disabled = false;
+                button.textContent = '执行搜索';
+            });
+        }
+
+        // 新增功能：启动下载
+        function startDownload() {
+            if (!confirm('确定要启动下载任务吗？这可能需要较长时间。')) {
+                return;
+            }
+
+            const button = document.getElementById('download-button');
+            button.disabled = true;
+            button.textContent = '下载中...';
+
+            fetch('/api/start_download', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // 显示完整输出
+                    alert(data.message + '\n\n完整输出:\n' + data.output);
+                } else {
+                    alert('下载失败: ' + data.error);
+                }
+                button.disabled = false;
+                button.textContent = '启动下载';
+            })
+            .catch(err => {
+                console.error("Download error:", err);
+                alert("下载失败，请检查服务器。");
+                button.disabled = false;
+                button.textContent = '启动下载';
+            });
+        }
+
+        // 新增功能：显示/隐藏日志查看器
+        function toggleLogViewer() {
+            const logViewer = document.getElementById('log-viewer');
+            logViewer.classList.toggle('hidden');
+            
+            if (!logViewer.classList.contains('hidden')) {
+                refreshLogs();
+            }
+        }
+
+        // 新增功能：刷新日志
+        function refreshLogs() {
+            const logContent = document.getElementById('log-content');
+            logContent.textContent = '加载中...';
+
+            fetch('/api/get_logs?lines=100') // 获取最后100行
+            .then(response => response.json())
+            .then(data => {
+                if (data.exists) {
+                    logContent.textContent = data.content || '日志为空';
+                    // 自动滚动到底部
+                    logContent.scrollTop = logContent.scrollHeight;
+                } else {
+                    logContent.textContent = data.content;
+                }
+            })
+            .catch(err => {
+                console.error("Load logs error:", err);
+                logContent.textContent = '加载日志失败';
+            });
+        }
+
+        // 新增功能：清空日志显示
+        function clearLogDisplay() {
+            document.getElementById('log-content').textContent = '';
+        }
+
+        // 新增功能：打开搜索关键词编辑器
+        function openSearchKeysEditor(animeTitle) {
+            currentEditingAnime = animeTitle;
+            const editor = document.getElementById('search-keys-editor');
+            const titleElement = document.getElementById('editor-anime-title');
+            const inputsContainer = document.getElementById('search-keys-inputs');
+            
+            titleElement.textContent = animeTitle;
+            inputsContainer.innerHTML = '';
+            
+            // 获取当前搜索关键词
+            const searchKeys = currentSearchConfig[animeTitle]?.search_keys || [animeTitle, '1080p'];
+            
+            // 为每个关键词创建输入框
+            searchKeys.forEach((key, index) => {
+                const inputDiv = document.createElement('div');
+                inputDiv.className = 'search-key-input-group';
+                inputDiv.innerHTML = `
+                    <input type="text" value="${key}" data-index="${index}" />
+                    <button onclick="removeSearchKeyInput(${index})">删除</button>
+                `;
+                inputsContainer.appendChild(inputDiv);
+            });
+            
+            editor.classList.remove('hidden');
+        }
+
+        // 新增功能：添加搜索关键词输入框
+        function addSearchKeyInput() {
+            const inputsContainer = document.getElementById('search-keys-inputs');
+            const currentInputs = inputsContainer.querySelectorAll('input');
+            const index = currentInputs.length;
+            
+            const inputDiv = document.createElement('div');
+            inputDiv.className = 'search-key-input-group';
+            inputDiv.innerHTML = `
+                <input type="text" value="" data-index="${index}" placeholder="输入搜索关键词" />
+                <button onclick="removeSearchKeyInput(${index})">删除</button>
+            `;
+            inputsContainer.appendChild(inputDiv);
+        }
+
+        // 新增功能：删除搜索关键词输入框
+        function removeSearchKeyInput(index) {
+            const inputsContainer = document.getElementById('search-keys-inputs');
+            const inputs = inputsContainer.querySelectorAll('.search-key-input-group');
+            if (inputs.length > 1) {
+                inputs[index].remove();
+                // 重新编号
+                inputsContainer.querySelectorAll('input').forEach((input, i) => {
+                    input.setAttribute('data-index', i);
+                });
+            } else {
+                alert('至少需要保留一个搜索关键词！');
+            }
+        }
+
+        // 新增功能：保存搜索关键词
+        function saveSearchKeys() {
+            const inputsContainer = document.getElementById('search-keys-inputs');
+            const inputs = inputsContainer.querySelectorAll('input');
+            const searchKeys = Array.from(inputs).map(input => input.value.trim()).filter(v => v);
+            
+            if (searchKeys.length === 0) {
+                alert('至少需要一个搜索关键词！');
+                return;
+            }
+            
+            fetch('/api/update_search_keys', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    title: currentEditingAnime,
+                    search_keys: searchKeys
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(data.message);
+                    closeSearchKeysEditor();
+                    loadSearchConfig();
+                } else {
+                    alert('保存失败: ' + data.error);
+                }
+            })
+            .catch(err => {
+                console.error("Save search keys error:", err);
+                alert("保存失败，请检查服务器。");
+            });
+        }
+
+        // 新增功能：关闭搜索关键词编辑器
+        function closeSearchKeysEditor() {
+            document.getElementById('search-keys-editor').classList.add('hidden');
+            currentEditingAnime = null;
+        }
+
+        // 新增功能：使用 Bangumi API 数据
+        function useBangumiData() {
+            if (!confirm('使用 Bangumi API 数据将替换当前的番剧列表，确定继续吗？')) {
+                return;
+            }
+
+            const button = document.getElementById('use-bangumi-button');
+            button.disabled = true;
+            button.textContent = '获取中...';
+
+            fetch('/api/use_bangumi_calendar', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(data.message);
+                    // 刷新页面数据
+                    loadData();
+                } else {
+                    alert('获取失败: ' + data.error);
+                }
+                button.disabled = false;
+                button.textContent = '使用Bangumi数据';
+            })
+            .catch(err => {
+                console.error("Bangumi API error:", err);
+                alert("获取失败，请检查服务器。");
+                button.disabled = false;
+                button.textContent = '使用Bangumi数据';
+            });
+        }
+
+        // 新增功能：显示番剧详情
+        function showAnimeDetail(animeTitle) {
+            const anime = window.allAnimeData[animeTitle];
+            if (!anime) {
+                alert('无法找到番剧信息');
+                return;
+            }
+
+            // 保存当前番剧ID供后续使用
+            window.currentAnimeDetail = anime;
+
+            // 填充详情信息
+            document.getElementById('detail-title').textContent = anime.primary_title;
+            document.getElementById('detail-jp-name').textContent = anime.jp_name || '-';
+            document.getElementById('detail-air-date').textContent = `${anime.begin_date} ${anime.weekday} ${anime.begin_time}`;
+            document.getElementById('detail-bangumi-id').textContent = anime.bangumi_id || '-';
+            
+            // 封面图
+            const coverImg = document.getElementById('detail-cover');
+            if (anime.images && anime.images.large) {
+                coverImg.src = anime.images.large;
+                coverImg.style.display = 'block';
+            } else {
+                coverImg.style.display = 'none';
+            }
+
+            // 评分信息
+            document.getElementById('detail-rating').textContent = anime.rating?.score || '-';
+            document.getElementById('detail-rank').textContent = anime.rank ? `#${anime.rank}` : '-';
+            document.getElementById('detail-eps').textContent = anime.eps_count || '-';
+
+            // 简介
+            document.getElementById('detail-summary-text').textContent = anime.summary || '暂无简介';
+
+            // 官网链接
+            const siteLink = document.getElementById('detail-site');
+            if (anime.site) {
+                siteLink.href = anime.site;
+                siteLink.style.display = 'inline';
+            } else {
+                siteLink.style.display = 'none';
+            }
+
+            // 收藏统计
+            if (anime.collection) {
+                document.getElementById('detail-wish').textContent = anime.collection.wish || 0;
+                document.getElementById('detail-doing').textContent = anime.collection.doing || 0;
+                document.getElementById('detail-collect').textContent = anime.collection.collect || 0;
+                document.getElementById('detail-hold').textContent = anime.collection.on_hold || 0;
+                document.getElementById('detail-drop').textContent = anime.collection.dropped || 0;
+            }
+
+            // 显示模态框
+            document.getElementById('anime-detail-viewer').classList.remove('hidden');
+            
+            // 切换到章节标签并加载数据
+            switchTab('episodes');
+        }
+
+        // 标签切换
+        function switchTab(tabName) {
+            // 更新标签按钮状态
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // 更新内容显示
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(`tab-${tabName}`).classList.add('active');
+            
+            // 加载对应数据
+            const anime = window.currentAnimeDetail;
+            if (!anime || !anime.bangumi_id) return;
+            
+            switch(tabName) {
+                case 'episodes':
+                    loadEpisodes(anime.bangumi_id);
+                    break;
+                case 'characters':
+                    loadCharacters(anime.bangumi_id);
+                    break;
+                case 'staff':
+                    loadStaff(anime.bangumi_id);
+                    break;
+                case 'relations':
+                    loadRelations(anime.bangumi_id);
+                    break;
+                case 'topics':
+                    loadTopics(anime.bangumi_id);
+                    break;
+                case 'comments':
+                    loadComments(anime.bangumi_id);
+                    break;
+            }
+        }
+
+        // 加载章节列表
+        async function loadEpisodes(subjectId) {
+            const container = document.getElementById('episodes-list');
+            const loading = document.getElementById('episodes-loading');
+            
+            loading.style.display = 'block';
+            container.innerHTML = '';
+            
+            try {
+                const response = await fetch(`/api/bangumi/episodes/${subjectId}`);
+                const result = await response.json();
+                
+                loading.style.display = 'none';
+                
+                if (result.status === 'success' && result.data.length > 0) {
+                    const episodes = result.data;
+                    
+                    // 添加批量操作按钮
+                    const toolbar = document.createElement('div');
+                    toolbar.className = 'episodes-toolbar';
+                    toolbar.innerHTML = `
+                        <button class="toolbar-btn" onclick="markAllEpisodesWatched(${subjectId})">
+                            ✓ 全部标记为已看
+                        </button>
+                        <button class="toolbar-btn" onclick="markAllEpisodesUnwatched(${subjectId})">
+                            ✗ 全部标记为未看
+                        </button>
+                    `;
+                    container.appendChild(toolbar);
+                    
+                    episodes.forEach(ep => {
+                        const epDiv = document.createElement('div');
+                        epDiv.className = 'episode-item';
+                        epDiv.id = `episode-${ep.id}`;
+                        epDiv.innerHTML = `
+                            <div class="episode-checkbox">
+                                <input type="checkbox" id="ep-check-${ep.id}" 
+                                    onchange="toggleEpisodeStatus(${subjectId}, ${ep.id}, this.checked)">
+                            </div>
+                            <div class="episode-number">EP ${ep.ep || ep.sort}</div>
+                            <div class="episode-info">
+                                <div class="episode-title">${ep.name_cn || ep.name || '未命名'}</div>
+                                <div class="episode-meta">
+                                    ${ep.airdate ? `放送日期: ${ep.airdate}` : ''}
+                                    ${ep.duration ? ` | 时长: ${ep.duration}` : ''}
+                                </div>
+                                ${ep.desc ? `<div class="episode-desc">${ep.desc}</div>` : ''}
+                            </div>
+                            <div class="episode-actions">
+                                <button class="ep-comment-btn" onclick="viewEpisodeComments(${ep.id})" title="查看本集吐槽">
+                                    💬
+                                </button>
+                            </div>
+                        `;
+                        container.appendChild(epDiv);
+                    });
+                    
+                    // 如果有用户 token，加载观看状态
+                    loadEpisodeWatchStatus(subjectId);
+                } else {
+                    container.innerHTML = '<p class="no-data">暂无章节信息</p>';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                container.innerHTML = '<p class="error">加载失败</p>';
+                console.error('加载章节失败:', error);
+            }
+        }
+
+        // 加载章节观看状态（需要用户认证）
+        async function loadEpisodeWatchStatus(subjectId) {
+            // 这里需要用户名，可以从配置中获取或让用户设置
+            // 暂时跳过，因为需要用户名
+            console.log('观看状态加载功能需要配置用户名');
+        }
+
+        // 切换章节观看状态
+        async function toggleEpisodeStatus(subjectId, episodeId, watched) {
+            try {
+                const type = watched ? 2 : 0; // 2=看过, 0=未收藏
+                const response = await fetch(`/api/bangumi/episode/${subjectId}/${episodeId}/status`, {
+                    method: 'PATCH',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({type: type})
+                });
+                
+                const result = await response.json();
+                if (result.status === 'success') {
+                    console.log(`章节 ${episodeId} 状态已更新为: ${watched ? '已看' : '未看'}`);
+                } else {
+                    alert('更新失败: ' + (result.error || '未知错误'));
+                    // 恢复复选框状态
+                    document.getElementById(`ep-check-${episodeId}`).checked = !watched;
+                }
+            } catch (error) {
+                console.error('更新章节状态失败:', error);
+                alert('更新失败，请检查网络连接');
+                document.getElementById(`ep-check-${episodeId}`).checked = !watched;
+            }
+        }
+
+        // 批量标记所有章节为已看
+        async function markAllEpisodesWatched(subjectId) {
+            const checkboxes = document.querySelectorAll('[id^="ep-check-"]');
+            const episodeIds = Array.from(checkboxes).map(cb => {
+                const id = cb.id.replace('ep-check-', '');
+                return parseInt(id);
+            });
+            
+            if (episodeIds.length === 0) return;
+            
+            try {
+                const response = await fetch(`/api/bangumi/episodes/${subjectId}/batch-status`, {
+                    method: 'PATCH',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({episode_ids: episodeIds, type: 2})
+                });
+                
+                const result = await response.json();
+                if (result.status === 'success') {
+                    // 更新所有复选框状态
+                    checkboxes.forEach(cb => cb.checked = true);
+                    alert('所有章节已标记为已看');
+                } else {
+                    alert('批量更新失败: ' + (result.error || '未知错误'));
+                }
+            } catch (error) {
+                console.error('批量更新失败:', error);
+                alert('批量更新失败，请检查网络连接');
+            }
+        }
+
+        // 批量标记所有章节为未看
+        async function markAllEpisodesUnwatched(subjectId) {
+            const checkboxes = document.querySelectorAll('[id^="ep-check-"]');
+            const episodeIds = Array.from(checkboxes).map(cb => {
+                const id = cb.id.replace('ep-check-', '');
+                return parseInt(id);
+            });
+            
+            if (episodeIds.length === 0) return;
+            
+            try {
+                const response = await fetch(`/api/bangumi/episodes/${subjectId}/batch-status`, {
+                    method: 'PATCH',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({episode_ids: episodeIds, type: 0})
+                });
+                
+                const result = await response.json();
+                if (result.status === 'success') {
+                    // 更新所有复选框状态
+                    checkboxes.forEach(cb => cb.checked = false);
+                    alert('所有章节已标记为未看');
+                } else {
+                    alert('批量更新失败: ' + (result.error || '未知错误'));
+                }
+            } catch (error) {
+                console.error('批量更新失败:', error);
+                alert('批量更新失败，请检查网络连接');
+            }
+        }
+
+        // 查看某集的评论/吐槽
+        function viewEpisodeComments(episodeId) {
+            // 可以创建一个模态框显示章节评论，或直接打开 Bangumi 页面
+            window.open(`https://bgm.tv/ep/${episodeId}`, '_blank');
+        }
+
+        // 加载角色和声优
+        async function loadCharacters(subjectId) {
+            const container = document.getElementById('characters-list');
+            const loading = document.getElementById('characters-loading');
+            
+            loading.style.display = 'block';
+            container.innerHTML = '';
+            
+            try {
+                const response = await fetch(`/api/bangumi/characters/${subjectId}`);
+                const result = await response.json();
+                
+                loading.style.display = 'none';
+                
+                if (result.status === 'success' && result.data.length > 0) {
+                    const characters = result.data;
+                    characters.forEach(char => {
+                        const charDiv = document.createElement('div');
+                        charDiv.className = 'character-item';
+                        
+                        const charInfo = char.character || {};
+                        const actors = char.actors || [];
+                        
+                        charDiv.innerHTML = `
+                            <div class="character-avatar">
+                                ${charInfo.images?.medium ? `<img src="${charInfo.images.medium}" alt="${charInfo.name}">` : '<div class="no-avatar">无头像</div>'}
+                            </div>
+                            <div class="character-info">
+                                <div class="character-name">${charInfo.name}</div>
+                                <div class="character-role">${char.relation || '角色'}</div>
+                                ${actors.length > 0 ? `
+                                    <div class="character-cv">
+                                        CV: ${actors.map(a => a.name).join(', ')}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                        container.appendChild(charDiv);
+                    });
+                } else {
+                    container.innerHTML = '<p class="no-data">暂无角色信息</p>';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                container.innerHTML = '<p class="error">加载失败</p>';
+                console.error('加载角色失败:', error);
+            }
+        }
+
+        // 加载制作人员
+        async function loadStaff(subjectId) {
+            const container = document.getElementById('staff-list');
+            const loading = document.getElementById('staff-loading');
+            
+            loading.style.display = 'block';
+            container.innerHTML = '';
+            
+            try {
+                const response = await fetch(`/api/bangumi/persons/${subjectId}`);
+                const result = await response.json();
+                
+                loading.style.display = 'none';
+                
+                if (result.status === 'success' && result.data.length > 0) {
+                    const staff = result.data;
+                    
+                    // 按职位分组
+                    const grouped = {};
+                    staff.forEach(person => {
+                        const role = person.relation || '其他';
+                        if (!grouped[role]) grouped[role] = [];
+                        grouped[role].push(person);
+                    });
+                    
+                    Object.keys(grouped).forEach(role => {
+                        const roleSection = document.createElement('div');
+                        roleSection.className = 'staff-section';
+                        roleSection.innerHTML = `<h4>${role}</h4>`;
+                        
+                        const staffGrid = document.createElement('div');
+                        staffGrid.className = 'staff-grid';
+                        
+                        grouped[role].forEach(person => {
+                            const personInfo = person.person || {};
+                            const personDiv = document.createElement('div');
+                            personDiv.className = 'staff-item';
+                            personDiv.innerHTML = `
+                                <div class="staff-avatar">
+                                    ${personInfo.images?.medium ? `<img src="${personInfo.images.medium}" alt="${personInfo.name}">` : '<div class="no-avatar">无头像</div>'}
+                                </div>
+                                <div class="staff-name">${personInfo.name}</div>
+                            `;
+                            staffGrid.appendChild(personDiv);
+                        });
+                        
+                        roleSection.appendChild(staffGrid);
+                        container.appendChild(roleSection);
+                    });
+                } else {
+                    container.innerHTML = '<p class="no-data">暂无制作人员信息</p>';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                container.innerHTML = '<p class="error">加载失败</p>';
+                console.error('加载制作人员失败:', error);
+            }
+        }
+
+        // 加载关联条目
+        async function loadRelations(subjectId) {
+            const container = document.getElementById('relations-list');
+            const loading = document.getElementById('relations-loading');
+            
+            loading.style.display = 'block';
+            container.innerHTML = '';
+            
+            try {
+                const response = await fetch(`/api/bangumi/relations/${subjectId}`);
+                const result = await response.json();
+                
+                loading.style.display = 'none';
+                
+                if (result.status === 'success' && result.data.length > 0) {
+                    const relations = result.data;
+                    relations.forEach(rel => {
+                        const relDiv = document.createElement('div');
+                        relDiv.className = 'relation-item';
+                        relDiv.innerHTML = `
+                            <div class="relation-cover">
+                                ${rel.images?.medium ? `<img src="${rel.images.medium}" alt="${rel.name}">` : '<div class="no-cover">无封面</div>'}
+                            </div>
+                            <div class="relation-info">
+                                <div class="relation-title">${rel.name_cn || rel.name}</div>
+                                <div class="relation-type">${rel.relation || '关联作品'}</div>
+                                ${rel.date ? `<div class="relation-date">${rel.date}</div>` : ''}
+                            </div>
+                        `;
+                        container.appendChild(relDiv);
+                    });
+                } else {
+                    container.innerHTML = '<p class="no-data">暂无关联条目</p>';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                container.innerHTML = '<p class="error">加载失败</p>';
+                console.error('加载关联条目失败:', error);
+            }
+        }
+
+        // 加载讨论话题
+        async function loadTopics(subjectId) {
+            const container = document.getElementById('topics-list');
+            const loading = document.getElementById('topics-loading');
+            
+            loading.style.display = 'block';
+            container.innerHTML = '';
+            
+            try {
+                const response = await fetch(`/api/bangumi/subject/${subjectId}/topics?limit=30`);
+                const result = await response.json();
+                
+                loading.style.display = 'none';
+                
+                if (result.status === 'success' && result.data.length > 0) {
+                    const topics = result.data;
+                    topics.forEach(topic => {
+                        const topicDiv = document.createElement('div');
+                        topicDiv.className = 'topic-item';
+                        
+                        // 转换时间戳为可读格式
+                        const createDate = topic.timestamp ? new Date(topic.timestamp * 1000).toLocaleDateString('zh-CN') : '';
+                        const lastpostDate = topic.lastpost ? new Date(topic.lastpost * 1000).toLocaleDateString('zh-CN') : '';
+                        
+                        topicDiv.innerHTML = `
+                            <div class="topic-header">
+                                <span class="topic-title" onclick="window.open('${topic.url || `https://bgm.tv/subject/topic/${topic.id}`}', '_blank')">
+                                    📌 ${topic.title || '无标题'}
+                                </span>
+                                <span class="topic-meta">
+                                    ${createDate}
+                                </span>
+                            </div>
+                            <div class="topic-info">
+                                <span class="topic-user">👤 ${topic.user?.nickname || topic.user?.username || '匿名'}</span>
+                                <span class="topic-replies">💬 ${topic.replies || 0} 回复</span>
+                                ${lastpostDate ? `<span class="topic-lastpost">最后回复: ${lastpostDate}</span>` : ''}
+                            </div>
+                        `;
+                        container.appendChild(topicDiv);
+                    });
+                    
+                    // 添加查看更多按钮
+                    const moreBtn = document.createElement('button');
+                    moreBtn.className = 'load-more-btn';
+                    moreBtn.textContent = '在 Bangumi 查看更多讨论';
+                    moreBtn.onclick = () => {
+                        window.open(`https://bgm.tv/subject/${subjectId}/board`, '_blank');
+                    };
+                    container.appendChild(moreBtn);
+                } else {
+                    container.innerHTML = '<p class="no-data">暂无讨论话题</p>';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                container.innerHTML = '<p class="error">加载失败</p>';
+                console.error('加载讨论话题失败:', error);
+            }
+        }
+
+        // 加载用户评论
+        async function loadComments(subjectId) {
+            const container = document.getElementById('comments-list');
+            const loading = document.getElementById('comments-loading');
+            
+            loading.style.display = 'block';
+            container.innerHTML = '';
+            
+            try {
+                const response = await fetch(`/api/bangumi/subject/${subjectId}/comments?limit=20`);
+                const result = await response.json();
+                
+                loading.style.display = 'none';
+                
+                if (result.status === 'success' && result.data.length > 0) {
+                    const blogs = result.data;
+                    blogs.forEach(blog => {
+                        const commentDiv = document.createElement('div');
+                        commentDiv.className = 'comment-item';
+                        
+                        const user = blog.user || {};
+                        // 转换时间戳为可读格式
+                        const dateStr = blog.dateline || (blog.timestamp ? new Date(blog.timestamp * 1000).toLocaleDateString('zh-CN') : '');
+                        
+                        commentDiv.innerHTML = `
+                            <div class="comment-header">
+                                <div class="comment-user">
+                                    ${user.avatar?.small ? `<img src="${user.avatar.small}" alt="${user.nickname}" class="user-avatar">` : ''}
+                                    <span class="user-name">${user.nickname || user.username || '匿名'}</span>
+                                </div>
+                            </div>
+                            <div class="comment-title">
+                                <a href="${blog.url || '#'}" target="_blank">${blog.title || '无标题'}</a>
+                            </div>
+                            <div class="comment-content">${blog.summary || '无内容摘要'}</div>
+                            <div class="comment-meta">
+                                ${dateStr}
+                                ${blog.replies ? ` | 💬 ${blog.replies} 回复` : ''}
+                            </div>
+                        `;
+                        container.appendChild(commentDiv);
+                    });
+                    
+                    // 添加查看更多按钮
+                    const moreBtn = document.createElement('button');
+                    moreBtn.className = 'load-more-btn';
+                    moreBtn.textContent = '在 Bangumi 查看更多日志';
+                    moreBtn.onclick = () => {
+                        window.open(`https://bgm.tv/subject/${subjectId}/reviews`, '_blank');
+                    };
+                    container.appendChild(moreBtn);
+                } else {
+                    container.innerHTML = '<p class="no-data">暂无评论日志</p>';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                container.innerHTML = '<p class="error">加载失败</p>';
+                console.error('加载用户评论失败:', error);
+            }
+        }
+
+        // 查看话题详情（打开新窗口）
+        function viewTopicDetail(topicId) {
+            window.open(`https://bgm.tv/subject/topic/${topicId}`, '_blank');
+        }
+
+        // 新增功能：关闭番剧详情
+        function closeAnimeDetail() {
+            document.getElementById('anime-detail-viewer').classList.add('hidden');
+            window.currentAnimeDetail = null;
         }
     </script>
 </body>

@@ -1,0 +1,23 @@
+[Unit]
+Description=Bangmi Web Interface - Flask Application
+After=network.target
+
+[Service]
+Type=simple
+User=xjz
+Group=xjz
+WorkingDirectory=/home/xjz/workplace/bangmi
+Environment="PATH=/usr/bin:/usr/local/bin"
+ExecStart=/usr/bin/python3 /home/xjz/workplace/bangmi/app.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=bangmi-web
+
+# 安全设置
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

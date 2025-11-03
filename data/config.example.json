@@ -1,0 +1,46 @@
+{
+    "global_settings": {
+        "bangumi_data_url": "https://unpkg.com/bangumi-data@0.3/dist/data.json",
+        "bangumi_api_token": "YOUR_BANGUMI_API_TOKEN_HERE",
+        "torrent_api_url": "https://api.animes.garden/resources",
+        "jst_timezone_offset": 9,
+        "chinese_weekdays": ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+        "download_history_file": "data/download_history.json",
+        "seedr_email": "YOUR_SEEDR_EMAIL",
+        "seedr_password": "YOUR_SEEDR_PASSWORD"
+    },
+    "local_storage": {
+        "anime_dir": "anime"
+    },
+    "seasonal_fetcher": {
+        "target_year": 2025,
+        "target_months": [10, 11, 12],
+        "output_file": "data/seasonal_anime_list.json"
+    },
+    "torrent_searcher": {
+        "watchlist_file": "data/watchlist.json",
+        "output_file": "data/search_results.json"
+    },
+    "bt_downloader": {
+        "client_type": "seedr",
+        "download_directory": "./anime",
+        "add_delay": 1,
+        "transmission": {
+            "host": "localhost",
+            "port": 9091,
+            "username": null,
+            "password": null
+        },
+        "qbittorrent": {
+            "host": "localhost",
+            "port": 8080,
+            "username": "admin",
+            "password": "adminadmin"
+        },
+        "aria2": {
+            "host": "localhost",
+            "port": 6800,
+            "secret": null
+        }
+    }
+}

@@ -15,7 +15,8 @@ import urllib.parse
 
 # --- 路径定义 ---
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-CONFIG_FILE = os.path.join(PROJECT_ROOT, 'config.json')
+CONFIG_FILE = os.path.join(PROJECT_ROOT, 'data/config.json')
+WATCHLIST_FILE = os.path.join(PROJECT_ROOT, 'data/watchlist.json')
 
 # --- 辅助函数 ---
 def print_error(msg): print(f"❌ {msg}", file=sys.stderr)
@@ -34,8 +35,20 @@ def load_config():
         print_error(f"读取配置文件失败: {e}")
         return None
 
+def load_watchlist():
+    """加载追番列表"""
+    if not os.path.exists(WATCHLIST_FILE):
+        print_error(f"追番列表文件 {WATCHLIST_FILE} 未找到!")
+        return {}
+    try:
+        with open(WATCHLIST_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print_error(f"读取追番列表失败: {e}")
+        return {}
+
 def load_json_file(filename, default_data):
-    """加载JSON文件"""
+    """加载JSON文件（使用相对于PROJECT_ROOT的路径）"""
     absolute_path = os.path.join(PROJECT_ROOT, filename)
     
     if not os.path.exists(absolute_path):
@@ -97,9 +110,14 @@ def analyze_magnet_trackers(magnet_url):
 
 # --- 核心逻辑 (来自您的代码, 无需修改) ---
 
-def get_anime_to_scan(config, seasonal_list):
+def get_anime_to_scan(config, watchlist, seasonal_list):
     """
     根据当前时间计算扫描时间窗口，并根据番剧播出时间决定扫描哪些番剧
+    
+    Args:
+        config: 配置信息
+        watchlist: 追番列表（包含每个番剧的放送时间信息）
+        seasonal_list: 当季番剧列表（作为备用数据源）
     """
     global_config = config.get('global_settings', {})
     jst_offset = global_config.get('jst_timezone_offset', 9)
@@ -117,12 +135,10 @@ def get_anime_to_scan(config, seasonal_list):
     # 定义扫描时间窗口
     if 0 <= now_jst.hour < 12:
         print_info("执行早上扫描任务（目标：昨天中午12点至今早5点）")
-        # 固定时间窗口：前一天12点到当天早上5点
         scan_end_time = now_jst.replace(hour=5, minute=0, second=0, microsecond=0)
         scan_start_time = (scan_end_time - datetime.timedelta(days=1)).replace(hour=12, minute=0, second=0, microsecond=0)
     elif 12 <= now_jst.hour < 24:
         print_info("执行下午补充扫描任务（目标：3点前48小时）")
-        # 固定时间窗口：前天下午3点到今天下午3点
         scan_end_time = now_jst.replace(hour=15, minute=0, second=0, microsecond=0)
         scan_start_time = scan_end_time - datetime.timedelta(hours=48)
     else:
@@ -131,27 +147,32 @@ def get_anime_to_scan(config, seasonal_list):
 
     print_info(f"扫描时间窗口：{scan_start_time.strftime('%Y-%m-%d %H:%M')} 至 {scan_end_time.strftime('%Y-%m-%d %H:%M')}")
 
-    # 构建番剧时间表
+    # 构建番剧时间表（作为备用数据源）
     anime_to_scan = {}
-    watchlist = config.get('torrent_searcher', {}).get('search_config', {})
-    schedule = {}
+    schedule_backup = {}
     
     for item in seasonal_list:
-        schedule[item['primary_title']] = item
+        schedule_backup[item['primary_title']] = item
         for name in item.get('all_cn_names', []):
             if name != item['primary_title']:
-                schedule[name] = item
+                schedule_backup[name] = item
 
     print_info(f"开始检查 {len(watchlist)} 部关注的番剧")
 
-    for title, search_config in watchlist.items():
-        anime_info = schedule.get(title)
-        if not anime_info:
-            print_info(f"跳过：番剧 '{title}' 在放送表中未找到")
-            continue
-            
-        air_weekday_cn = anime_info.get('weekday')
-        air_time_str = anime_info.get('begin_time')
+    for title, anime_config in watchlist.items():
+        # 优先从 watchlist 中读取放送时间
+        air_weekday_cn = anime_config.get('weekday')
+        air_time_str = anime_config.get('begin_time')
+        
+        # 如果 watchlist 中没有，尝试从 seasonal_list 中获取
+        if not air_weekday_cn or not air_time_str or air_time_str == '00:00':
+            anime_info = schedule_backup.get(title)
+            if anime_info:
+                air_weekday_cn = anime_info.get('weekday')
+                air_time_str = anime_info.get('begin_time')
+            else:
+                print_info(f"跳过：番剧 '{title}' 未找到放送时间信息")
+                continue
         
         if not air_weekday_cn or not air_time_str:
             print_info(f"跳过：番剧 '{title}' 缺少播出时间信息")
@@ -172,13 +193,24 @@ def get_anime_to_scan(config, seasonal_list):
             
             for check_date in check_dates:
                 check_dt = datetime.datetime.combine(check_date, air_time)
-                if check_dt.weekday() == air_weekday_index and scan_start_time <= check_dt < scan_end_time:
+                
+                # 关键修改：如果播出时间是00:00，说明是前一天的24:00（即第二天凌晨）
+                # 例如："周六 00:00" 实际是 "周六 24:00" = "周日凌晨"
+                # 所以需要将番剧的 weekday 往后推一天来匹配实际播出日
+                actual_weekday = check_dt.weekday()
+                if air_hour == 0 and air_minute == 0:
+                    # 00:00 实际是前一天深夜，所以番剧标记的周六实际在周日播出
+                    target_weekday = (air_weekday_index + 1) % 7
+                else:
+                    target_weekday = air_weekday_index
+                
+                if actual_weekday == target_weekday and scan_start_time <= check_dt < scan_end_time:
                     is_in_window = True
                     break
 
             if is_in_window:
                 print_success(f"加入扫描队列：{title}（{air_weekday_cn} {air_time_str}）")
-                anime_to_scan[title] = search_config
+                anime_to_scan[title] = anime_config
             else:
                 print_info(f"跳过：{title}（{air_weekday_cn} {air_time_str}）不在时间窗口内")
                 
@@ -189,17 +221,46 @@ def get_anime_to_scan(config, seasonal_list):
 
 
 def parse_episode_number(title):
-    """从标题中解析集数"""
-    match = re.search(
-        r'\[(\d{1,3}(?:\.\d{1,2})?)(?:v\d)?\]|'
-        r'[\s\.\-_\[](\d{1,3})[\s\.\-_\]]|'
-        r'第(\d{1,3})[话話集]|'
+    """
+    从标题中解析集数
+    优先级：
+    1. [数字] 或 【数字】 格式（方括号内的集数）
+    2. 第X话/話/集 格式
+    3. 其他数字格式
+    """
+    # 优先匹配方括号内的集数（包括v2等版本号）
+    # 匹配 [41] [41v2] 【41】等格式
+    bracket_match = re.search(
+        r'[\[【](\d{1,3}(?:\.\d{1,2})?)(?:v\d+)?[\]】]',
+        title
+    )
+    if bracket_match:
+        try:
+            num = float(bracket_match.group(1))
+            if 0 <= num < 1000:
+                return num
+        except ValueError:
+            pass
+    
+    # 其次匹配"第X话/話/集"格式
+    chinese_match = re.search(r'第(\d{1,3})[话話集]', title)
+    if chinese_match:
+        try:
+            num = float(chinese_match.group(1))
+            if 0 <= num < 1000:
+                return num
+        except ValueError:
+            pass
+    
+    # 最后匹配其他格式
+    other_match = re.search(
+        r'[\s\.\-_](\d{1,3})[\s\.\-_\]]|'
         r'(\d{1,3})\s*END',
         title,
         re.IGNORECASE
     )
-    if match:
-        for group in match.groups():
+    if other_match:
+        for group in other_match.groups():
             if group is not None:
                 try:
                     num = float(group)
@@ -207,6 +268,7 @@ def parse_episode_number(title):
                         return num
                 except ValueError:
                     continue
+    
     return None
 
 def search_and_select_episode(search_title, config, api_url, history_data):
@@ -315,11 +377,16 @@ def main():
         
     seasonal_list = load_json_file(seasonal_file, [])
     if not seasonal_list:
-        print_error(f"{seasonal_file} 为空，请先运行 get_seasonal_anime.py")
+        print_error(f"{seasonal_file} 为空，请先使用 Bangumi API 获取数据")
         return
 
-    # 3. 加载下载历史 (仅用于读取)
-    # (使用新的辅助函数, 传入 config.json 中的相对路径)
+    # 3. 加载追番列表
+    watchlist = load_watchlist()
+    if not watchlist:
+        print_error("追番列表为空")
+        return
+
+    # 4. 加载下载历史 (仅用于读取)
     history_file = global_config.get('download_history_file')
     if not history_file:
         print_error("config.json 中 'global_settings.download_history_file' 未配置")
@@ -327,20 +394,19 @@ def main():
         
     history_data = load_json_file(history_file, {"highest_episode_downloaded": {}, "all_downloaded_magnets": []})
 
-    # 4. 获取今天该扫描的番剧 (不变)
-    anime_to_scan = get_anime_to_scan(config, seasonal_list)
+    # 5. 获取今天该扫描的番剧
+    anime_to_scan = get_anime_to_scan(config, watchlist, seasonal_list)
 
     if not anime_to_scan:
         print_info("当前时间窗口内没有需要扫描的番剧")
         return
 
-    # 5. 执行搜索
+    # 6. 执行搜索
     print_info(f"开始扫描 {len(anime_to_scan)} 部番剧")
     api_url = global_config.get('torrent_api_url')
-    # (修改) output_file 是 search_results.json
     output_file = script_config.get('output_file')
     
-    # (修改) 准备一个列表来装完整的“任务对象”
+    # 准备一个列表来装完整的"任务对象"
     new_tasks_for_queue = []
 
     for title, conf in anime_to_scan.items():

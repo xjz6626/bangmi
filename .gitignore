@@ -1,14 +1,50 @@
+# 下载的动漫文件
 anime/
 *.mp4
 *.mkv
+*.avi
+*.flv
+*.webm
+
+# 日志文件
 *.log
-scheduler.log
-search_results.json
-download_history.json
-config.json
-config.json.local
+data/scheduler.log
+
+# 运行时生成的 JSON 数据文件
+data/search_results.json
+data/download_history.json
+data/seasonal_anime_list.json
+data/watchlist.json
+data/api_raw_response.json
+
+# 配置文件（包含敏感信息）
+data/config.json
+data/config.json.local
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# 环境变量
 .env
+.env.local
+
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+Thumbs.db

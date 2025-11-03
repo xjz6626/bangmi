@@ -18,7 +18,8 @@ import traceback # 用于打印错误堆栈
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SEARCH_SCRIPT = os.path.join(PROJECT_ROOT, 'search_torrents.py')
 DOWNLOAD_SCRIPT = os.path.join(PROJECT_ROOT, 'download_bt.py')
-LOG_FILE = os.path.join(PROJECT_ROOT, 'scheduler.log') # 日志文件
+DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
+LOG_FILE = os.path.join(DATA_DIR, 'scheduler.log') # 日志文件移至 data 目录
 
 # --- 配置 ---
 # (重要) 请确保您的服务器时区设置正确，或者在此处明确指定
@@ -138,8 +139,12 @@ def run_job():
 
 # --- 主调度逻辑 ---
 def main():
+    # 确保 data 目录存在
+    os.makedirs(DATA_DIR, exist_ok=True)
+    
     print_log("====== 🚀 启动 Bangumi 自动追番调度器 ======")
     print_log(f"项目根目录: {PROJECT_ROOT}")
+    print_log(f"数据目录: {DATA_DIR}")
     print_log(f"日志文件: {LOG_FILE}")
     print_log(f"目标时区: {TARGET_TZ.zone}")
     print_log(f"计划执行时间 (JST): {', '.join(TARGET_TIMES_JST)}")

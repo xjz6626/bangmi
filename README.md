@@ -1,194 +1,386 @@
-🎌 自动追番系统（Bangmi — Bangumi Auto-Downloader）
+# 🎌 Bangmi - 自动追番系统
 
-一个自动化追番工具，按播出时间搜索番剧、通过 Seedr.cc 做云端离线下载并把完成的视频同步到本地。
+<div align="center">
 
-## 核心功能
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Flask](https://img.shields.io/badge/Flask-2.0+-green.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-- 新番拉取：`get_seasonal_anime.py` 从 Bangumi Data 获取指定季度的番剧列表。
-- Web 管理：`app.py` 提供基于 Flask 的管理界面，便于勾选/管理追番。
-- 定时调度：`bangmi_scheduler.py` 作为后台调度器按 JST 定时触发搜索与下载。
-- 智能搜索：`search_torrents.py` 根据播出时间、追番配置和下载历史，筛选并生成下载任务。
-- 云端下载：`download_bt.py` 集成 Seedr.cc（seedrcc），完成磁力 -> 云端 -> 本地的全流程。
-- 历史跟踪：`download_history.json` 记录已下载的最高集数与磁力链接，避免重复下载。
-- 任务队列：`search_results.json` 作为搜索到下载之间的任务队列，支持失败重试。
+一个功能完善的自动化追番系统，集成 Bangumi API、智能种子搜索、云端下载和 Web 管理界面
 
-## 项目结构（简要）
+[功能特性](#-功能特性) • [快速开始](#-快速开始) • [配置说明](#-配置说明) • [使用指南](#-使用指南) • [API 文档](#-api-文档)
 
-```
-.
-├── bangmi_scheduler.py        # 调度器（后台运行）
-├── get_seasonal_anime.py      # 获取季度新番列表
-├── app.py                     # Flask Web 管理界面
-├── search_torrents.py         # 智能搜索脚本
-├── download_bt.py             # Seedr 云端下载脚本
+</div>
 
-├── config.json                # 核心配置（请保密，不提交到仓库）
-├── config.example.json        # 配置示例（提交到仓库）
-├── seasonal_anime_list.json   # 季度番剧数据（脚本生成）
-├── download_history.json      # 下载历史（脚本生成）
-├── search_results.json        # 任务队列（脚本生成）
-├── scheduler.log              # 调度日志（可被忽略）
+---
 
-├── templates/                 # Flask 模板（web UI）
-└── static/                    # 静态资源（CSS 等）
+## ✨ 功能特性
 
-└── anime/                     # 本地下载目录（在 .gitignore 中）
-```
+### 🎯 核心功能
+- **🌐 Web 管理界面** - 基于 Flask 的现代化 Web UI，可视化管理追番列表
+- **📺 Bangumi 集成** - 完整集成 Bangumi API，获取番剧详情、评分、角色、讨论等
+- **🔍 智能搜索** - 自动从 animes.garden 搜索种子，支持关键词过滤和集数识别
+- **☁️ 云端下载** - 使用 Seedr 云端服务下载种子，无需本地 BT 客户端
+- **⏰ 定时调度** - 基于 JST 时区的定时任务，自动搜索和下载新番
+- **📝 历史跟踪** - 自动记录下载历史，避免重复下载
+- **🎭 观看状态** - 支持标记章节观看状态（需要 Bangumi Token）
 
-## 快速开始
+### 📊 番剧信息展示
+- 评分和排名
+- 封面图片
+- 剧情简介
+- 章节列表（每集标题、放送日期）
+- 角色和声优信息
+- 制作人员（导演、编剧等）
+- 关联作品（前作、续集）
+- 讨论区和评论日志
 
-### 1. 安装依赖
+### 🔧 技术栈
+- **后端**: Flask, Python 3.8+
+- **API**: Bangumi API (Legacy + v0)
+- **下载**: Seedr Cloud Service
+- **调度**: schedule + pytz (JST timezone)
+- **前端**: HTML5 + CSS3 + Vanilla JavaScript
 
-推荐使用虚拟环境：
+---
+
+## 🚀 快速开始
+
+### 1. 环境要求
+
+- Python 3.8 或更高版本
+- pip 包管理器
+- Seedr 账号（用于云端下载）
+- Bangumi API Token（可选，用于高级功能）
+
+### 2. 克隆项目
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip3 install requests schedule pytz seedrcc flask
+git clone https://github.com/xjz6626/bangmi.git
+cd bangmi
 ```
 
-（如果没有 `requirements.txt`，上面命令会回退为手动安装常用依赖）
-
-### 2. 配置
-
-复制示例配置并编辑：
+### 3. 安装依赖
 
 ```bash
+# 推荐使用虚拟环境
+python3 -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# 安装依赖
+pip install -r requirements.txt
+```
+
+如果没有 `requirements.txt`，手动安装：
+
+```bash
+pip install flask requests schedule pytz seedrcc
+```
+
+### 4. 配置系统
+
+复制示例配置文件并编辑：
+
+```bash
+cd data
 cp config.example.json config.json
-# 编辑 config.json，填写 seedr_email / seedr_password 等敏感信息
+cp watchlist.example.json watchlist.json
+cd ..
 ```
 
-注意：`config.json` 含有敏感信息，仓库中已将其加入 `.gitignore`，请勿将真实凭据提交到远程。
+编辑 `data/config.json`，填入你的配置：
 
-### 3. 生成季度番剧列表（每季度执行一次）
+```json
+{
+    "global_settings": {
+        "bangumi_api_token": "YOUR_BANGUMI_API_TOKEN",
+        "seedr_email": "your_email@example.com",
+        "seedr_password": "your_seedr_password"
+    }
+}
+```
+
+**获取 Bangumi API Token**: 访问 https://next.bgm.tv/demo/access-token
+
+**注册 Seedr**: 访问 https://www.seedr.cc/
+
+### 5. 启动 Web 服务
 
 ```bash
-python3 get_seasonal_anime.py
+python app.py
 ```
 
-脚本会根据 `config.json` 中的 `target_year` 与 `target_months` 生成 `seasonal_anime_list.json`。
+打开浏览器访问: http://localhost:5000
 
-### 4. 使用 Web UI 管理追番（可选）
+### 6. 配置系统服务（可选）
+
+将 Web 服务和调度器注册为系统服务：
 
 ```bash
-python3 app.py
-```
+# 复制服务文件
+sudo cp bangmi-web.service /etc/systemd/system/
+sudo cp bangmi-scheduler.service /etc/systemd/system/
 
-访问：http://127.0.0.1:5000，勾选要追的番剧并保存。
+# 编辑服务文件，修改路径和用户
+sudo nano /etc/systemd/system/bangmi-web.service
 
-### 5. 启动调度器（推荐后台运行）
-
-```bash
-nohup python3 bangmi_scheduler.py > scheduler.log 2>&1 &
-```
-
-调度器会在 JST（Asia/Tokyo）按 `TARGET_TIMES_JST` 设定触发 `search_torrents.py` 与 `download_bt.py`。
-
-### 手动运行（调试/测试）
-
-- 手动搜索：
-```bash
-python3 search_torrents.py
-```
-- 手动下载队列：
-```bash
-python3 download_bt.py
-```
-
-## 文件说明（功能概述）
-
-- `get_seasonal_anime.py`：拉取并筛选当季度番剧。
-- `app.py`：Flask Web 管理界面，更新 `config.json` 中的 `torrent_searcher.search_config`。
-- `bangmi_scheduler.py`：调度器，负责定时触发搜索与下载。
-- `search_torrents.py`：根据时间窗口和历史生成 `search_results.json` 任务。
-- `download_bt.py`：使用 Seedr 服务上传磁力、等待云端完成并下载到本地，最后清理云端并更新历史记录。
-
-## 注意事项
-
-- Seedr 依赖：下载逻辑强依赖 Seedr.cc（`seedrcc` 库）。当前脚本不会使用 `qbittorrent`/`transmission`/`aria2` 配置块。
-- 隐私与安全：`config.json` 包含凭据，请务必保密。仓库中保留了 `config.example.json` 供他人参考。
-- 时区：系统按 JST（Asia/Tokyo）判断播出时间，请确保时间配置与目标时区一致。
-
-## 将调度器注册为 systemd 服务（可选，推荐服务器运行）
-
-下面提供两种常见方案：系统级（system service）和用户级（user service）。如果你的服务器供多用户使用或希望开机时自动启动，请使用**系统级**服务；如果你仅以个人用户运行并且不希望修改系统服务，请使用**用户级**服务（需启用 linger 来在无登录时启动）。
-
-### 1) 系统级 service（以 root 创建）
-
-创建一个 system unit（在 `/etc/systemd/system/bangmi.service`）：
-
-```ini
-[Unit]
-Description=Bangmi Scheduler
-After=network.target
-
-[Service]
-Type=simple
-User=xjz
-WorkingDirectory=/home/xjz/workplace/bangmi
-ExecStart=/usr/bin/env python3 /home/xjz/workplace/bangmi/bangmi_scheduler.py
-Restart=on-failure
-RestartSec=10
-
-[Install]
-WantedBy=multi-user.target
-```
-
-保存后执行：
-
-```bash
+# 启用并启动服务
 sudo systemctl daemon-reload
-sudo systemctl enable --now bangmi.service
+sudo systemctl enable bangmi-web.service
+sudo systemctl start bangmi-web.service
+
+# 查看服务状态
+sudo systemctl status bangmi-web.service
 ```
 
-检查状态与日志：
+---
+
+## ⚙️ 配置说明
+
+### config.json
+
+主配置文件，包含所有系统设置：
+
+```json
+{
+    "global_settings": {
+        "bangumi_api_token": "你的Bangumi API Token",
+        "seedr_email": "Seedr 邮箱",
+        "seedr_password": "Seedr 密码",
+        "torrent_api_url": "https://api.animes.garden/resources",
+        "download_history_file": "data/download_history.json"
+    },
+    "local_storage": {
+        "anime_dir": "anime"
+    },
+    "seasonal_fetcher": {
+        "target_year": 2025,
+        "target_months": [10, 11, 12],
+        "output_file": "data/seasonal_anime_list.json"
+    }
+}
+```
+
+### watchlist.json
+
+追番列表，通过 Web 界面管理：
+
+```json
+{
+    "间谍过家家 第三季": {
+        "search_keys": ["间谍过家家", "1080p"],
+        "weekday": "周六",
+        "begin_time": "23:00",
+        "begin_date": "2025-10-05"
+    }
+}
+```
+
+---
+
+## 📖 使用指南
+
+### Web 界面操作
+
+1. **刷新新番列表**: 点击"更新失效: 更新失败"按钮，从 Bangumi 获取当季新番
+2. **添加追番**: 勾选想要追的番剧，点击"保存"
+3. **编辑搜索关键词**: 点击番剧旁的编辑按钮，修改搜索关键词
+4. **查看番剧详情**: 点击番剧名称，查看详细信息、章节列表等
+5. **手动搜索**: 点击"搜索种子"按钮，立即搜索新集
+6. **手动下载**: 点击"启动下载"按钮，下载搜索到的种子
+7. **查看日志**: 点击"查看日志"按钮，查看调度器运行日志
+
+### 命令行操作
 
 ```bash
-sudo systemctl status bangmi.service
-sudo journalctl -u bangmi.service -n 200 --no-pager
+# 手动刷新新番列表（已移除 get_seasonal_anime.py，使用 Bangumi API）
+python -c "from app import bangumi_client; from bangumi_api import convert_calendar_to_seasonal_list; import json; data = convert_calendar_to_seasonal_list(bangumi_client.get_calendar()); json.dump(data, open('data/seasonal_anime_list.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=4)"
+
+# 手动搜索种子
+python search_torrents.py
+
+# 手动下载
+python download_bt.py
+
+# 启动调度器（前台运行）
+python bangmi_scheduler.py
 ```
 
-### 2) 用户级 service（无需 root，但需开启 linger）
+### 调度器时间表
 
-在 `~/.config/systemd/user` 下创建 `bangmi.service`：
+默认在 JST 时区的以下时间自动运行：
+- 每天 05:00 (搜索 + 下载)
+- 每天 15:00 (搜索 + 下载)
 
-```ini
-[Unit]
-Description=Bangmi Scheduler (user)
-After=network.target
+可在 `bangmi_scheduler.py` 中修改 `TARGET_TIMES_JST` 变量。
 
-[Service]
-Type=simple
-WorkingDirectory=/home/xjz/workplace/bangmi
-ExecStart=/usr/bin/env python3 /home/xjz/workplace/bangmi/bangmi_scheduler.py
-Restart=on-failure
-RestartSec=10
+---
 
-[Install]
-WantedBy=default.target
+## 🔌 API 文档
+
+### Web API 端点
+
+#### 基础功能
+- `GET /` - Web 主页
+- `GET /api/data` - 获取新番列表和追番列表
+- `POST /api/save_watchlist` - 保存追番列表
+- `POST /api/refresh_seasonal` - 刷新新番列表
+- `POST /api/search_torrents` - 触发种子搜索
+- `POST /api/start_download` - 触发下载任务
+- `GET /api/get_logs` - 获取调度器日志
+- `POST /api/update_search_keys` - 更新番剧搜索关键词
+
+#### Bangumi API
+- `GET /api/bangumi/calendar` - 获取每日放送
+- `GET /api/bangumi/search?keyword=关键词` - 搜索番剧
+- `GET /api/bangumi/subject/<id>` - 获取番剧详情
+- `GET /api/bangumi/episodes/<id>` - 获取章节列表
+- `GET /api/bangumi/characters/<id>` - 获取角色信息
+- `GET /api/bangumi/persons/<id>` - 获取制作人员
+- `GET /api/bangumi/relations/<id>` - 获取关联作品
+- `GET /api/bangumi/subject/<id>/topics` - 获取讨论话题
+- `GET /api/bangumi/subject/<id>/comments` - 获取评论日志
+
+#### 用户功能（需要 Token）
+- `GET /api/bangumi/user/<username>/collections` - 获取用户收藏
+- `PATCH /api/bangumi/episode/<subject_id>/<episode_id>/status` - 更新章节状态
+- `PATCH /api/bangumi/episodes/<subject_id>/batch-status` - 批量更新章节状态
+
+---
+
+## 📁 项目结构
+
+```
+bangmi/
+├── app.py                      # Flask Web 应用
+├── bangmi_scheduler.py         # 定时调度器
+├── bangumi_api.py              # Bangumi API 客户端
+├── search_torrents.py          # 种子搜索脚本
+├── download_bt.py              # 下载管理脚本
+├── bangmi-web.service          # Web 服务配置（systemd）
+├── README.md                   # 项目说明
+├── requirements.txt            # Python 依赖
+├── data/                       # 数据目录
+│   ├── config.example.json     # 配置示例
+│   ├── watchlist.example.json  # 追番列表示例
+│   ├── config.json             # 实际配置（不提交）
+│   ├── watchlist.json          # 实际追番列表（不提交）
+│   ├── seasonal_anime_list.json # 新番列表（自动生成）
+│   ├── search_results.json     # 搜索结果（自动生成）
+│   ├── download_history.json   # 下载历史（自动生成）
+│   └── scheduler.log           # 调度日志（自动生成）
+├── anime/                      # 下载目录（不提交）
+├── templates/                  # HTML 模板
+│   └── index.html
+└── static/                     # 静态资源
+    └── style.css
 ```
 
-启用并启动：
+---
+
+## 🔧 高级配置
+
+### 修改下载客户端
+
+虽然默认使用 Seedr，但也支持其他 BT 客户端：
+
+```json
+{
+    "bt_downloader": {
+        "client_type": "qbittorrent",  // 可选: transmission, aria2
+        "qbittorrent": {
+            "host": "localhost",
+            "port": 8080,
+            "username": "admin",
+            "password": "adminadmin"
+        }
+    }
+}
+```
+
+### 自定义搜索关键词
+
+在追番列表中为每个番剧配置特定的搜索关键词：
+
+```json
+{
+    "番剧名称": {
+        "search_keys": [
+            "番剧关键词1",
+            "字幕组",
+            "1080p",
+            "简体"
+        ]
+    }
+}
+```
+
+### 修改调度时间
+
+编辑 `bangmi_scheduler.py`:
+
+```python
+TARGET_TIMES_JST = ["05:00", "15:00", "20:00"]  # 添加更多时间点
+```
+
+---
+
+## 🐛 故障排查
+
+### Web 服务无法启动
 
 ```bash
-systemctl --user daemon-reload
-systemctl --user enable --now bangmi.service
-# 如果希望在未登录时也能运行（允许 user services 在没有交互登录时启动）
-sudo loginctl enable-linger $USER
+# 检查端口占用
+sudo lsof -i :5000
+
+# 查看服务日志
+sudo journalctl -u bangmi-web.service -f
 ```
 
-查看日志：
+### 下载失败
 
-```bash
-journalctl --user -u bangmi.service -n 200 --no-pager
-```
+1. 检查 Seedr 账号是否正常
+2. 查看 `data/scheduler.log` 日志
+3. 手动运行测试: `python download_bt.py`
 
-### 常见问题与建议
+### 搜索不到种子
 
-- 如果脚本依赖虚拟环境，修改 `ExecStart` 指向虚拟环境中的 python：
-	`/home/xjz/workplace/bangmi/.venv/bin/python /home/xjz/workplace/bangmi/bangmi_scheduler.py`
-- 请确保 `User` 的权限可以访问 `anime/` 目录和其他相关文件。可通过 `chown -R xjz:xjz /home/xjz/workplace/bangmi/anime` 设置文件所有权。
-- 使用 `Restart=on-failure` 可以在脚本崩溃时自动重启；若需要更强的保护可用 `Restart=always`。
+1. 检查追番列表的搜索关键词是否准确
+2. 确认番剧已经开播
+3. 手动运行测试: `python search_torrents.py`
 
+### Bangumi API 返回 404
 
+某些 API 功能需要 Legacy API，确保：
+1. 使用正确的 API Token
+2. 检查番剧 ID 是否正确
+3. 部分功能（如观看状态）可能需要 v0 API Token
 
+---
+
+## 📝 许可证
+
+MIT License - 详见 [LICENSE](LICENSE) 文件
+
+---
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+---
+
+## 📮 联系方式
+
+- GitHub: [@xjz6626](https://github.com/xjz6626)
+- 项目地址: https://github.com/xjz6626/bangmi
+
+---
+
+<div align="center">
+
+**如果这个项目对你有帮助，请给一个 ⭐️ Star！**
+
+Made with ❤️ by xjz6626
+
+</div>

@@ -15,9 +15,9 @@ import sys
 
 # --- 1. 路径定义 ---
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-CONFIG_FILE = os.path.join(PROJECT_ROOT, 'config.json')
-HISTORY_FILE = os.path.join(PROJECT_ROOT, 'download_history.json')
-SEARCH_RESULTS_FILE = os.path.join(PROJECT_ROOT, 'search_results.json')
+CONFIG_FILE = os.path.join(PROJECT_ROOT, 'data/config.json')
+HISTORY_FILE = os.path.join(PROJECT_ROOT, 'data/download_history.json')
+SEARCH_RESULTS_FILE = os.path.join(PROJECT_ROOT, 'data/search_results.json')
 DOWNLOAD_DIR = os.path.join(PROJECT_ROOT, 'anime')
 
 # --- 2. 辅助功能 ---
@@ -60,6 +60,8 @@ def save_json(file_path, data):
 
 def login_to_seedr():
     """使用配置文件中的账号密码登录Seedr"""
+    print_info("加载配置文件...")
+    sys.stdout.flush()
     config = load_config()
     if not config:
         return None
@@ -73,13 +75,18 @@ def login_to_seedr():
         return None
     
     try:
-        print_info("正在登录 Seedr...")
+        print_info(f"正在使用账号 {email} 登录 Seedr...")
+        sys.stdout.flush()
         client = Seedr.from_password(email, password)
+        print_info("获取用户设置...")
+        sys.stdout.flush()
         settings = client.get_settings()
         print_success(f"Seedr 登录成功，用户: {settings.account.username}")
         return client
     except Exception as e:
         print_error(f"Seedr 登录失败: {e}")
+        import traceback
+        traceback.print_exc()
         return None
 
 def is_already_downloaded(magnet, history):
@@ -134,10 +141,47 @@ def wait_for_seedr_download(client, torrent_id, title, skip_initial_wait=False):
     
     print_info(f"检查 Seedr 下载状态: {title}")
     
+    # 提取关键词 - 改进版
+    def extract_keywords(title):
+        """从标题中提取关键词用于匹配"""
+        # 移除方括号和括号内容，但保留数字
+        import re
+        # 提取集数
+        episode_match = re.search(r'[\[【](\d{1,3})[\]】]', title)
+        episode_num = episode_match.group(1) if episode_match else None
+        
+        # 移除字幕组信息
+        cleaned = re.sub(r'[\[【][^\]】]*(?:字幕|Sub)[^\]】]*[\]】]', '', title, flags=re.IGNORECASE)
+        # 移除分辨率信息
+        cleaned = re.sub(r'\b(?:1080p|720p|2160p|4K|WebRip|BDRip|BluRay|HEVC|x264|x265)\b', '', cleaned, flags=re.IGNORECASE)
+        # 移除语言信息
+        cleaned = re.sub(r'[\[【](?:简|繁|日|英|内嵌|外挂)+.*?[\]】]', '', cleaned)
+        
+        # 分割并清理
+        keywords = []
+        # 按常见分隔符分割
+        parts = re.split(r'[\s\-_/【】\[\]]+', cleaned)
+        for part in parts:
+            part = part.strip()
+            # 保留有意义的词（字母数字组合、中文、长度>1的词）
+            if part and (len(part) > 1 or re.search(r'[\u4e00-\u9fff]', part)):
+                keywords.append(part.lower())
+        
+        # 添加集数作为关键词
+        if episode_num:
+            keywords.append(episode_num)
+        
+        return [kw for kw in keywords if kw][:8]  # 返回前8个关键词
+    
+    title_keywords = extract_keywords(title)
+    print_info(f"提取的匹配关键词: {title_keywords}")
+    
     # 最多检查5次，每次间隔30秒
     for attempt in range(5):
         try:
             contents = client.list_contents()
+            
+            print_info(f"Seedr 根目录文件数: {len(contents.files)}, 文件夹数: {len(contents.folders)}")
             
             # 寻找匹配的文件或文件夹
             video_extensions = ['.mp4', '.mkv', '.avi', '.mov', '.wmv', '.flv', '.webm', '.m4v']
@@ -146,14 +190,16 @@ def wait_for_seedr_download(client, torrent_id, title, skip_initial_wait=False):
             for file in contents.files:
                 file_ext = os.path.splitext(file.name.lower())[1]
                 if file_ext in video_extensions:
-                    # 检查文件名是否匹配（通过关键词）
-                    title_keywords = [kw for kw in title.lower().split() if len(kw) > 2][:4]
-                    if any(keyword in file.name.lower() for keyword in title_keywords):
-                        print_success(f"发现匹配的视频文件: {file.name}")
+                    print_info(f"检查文件: {file.name}")
+                    # 检查文件名是否匹配（至少匹配2个关键词）
+                    match_count = sum(1 for keyword in title_keywords if keyword in file.name.lower())
+                    if match_count >= 2:
+                        print_success(f"✅ 发现匹配的视频文件: {file.name} (匹配{match_count}个关键词)")
                         return file, 'file'
             
             # 检查文件夹
             for folder in contents.folders:
+                print_info(f"检查文件夹: {folder.name}")
                 try:
                     folder_contents = client.list_contents(folder_id=folder.id)
                     
@@ -161,18 +207,19 @@ def wait_for_seedr_download(client, torrent_id, title, skip_initial_wait=False):
                     for file in folder_contents.files:
                         file_ext = os.path.splitext(file.name.lower())[1]
                         if file_ext in video_extensions:
-                            # 检查文件名是否匹配
-                            title_keywords = [kw for kw in title.lower().split() if len(kw) > 2][:4]
-                            if any(keyword in file.name.lower() for keyword in title_keywords):
-                                print_success(f"发现文件夹中的匹配视频: {folder.name}/{file.name}")
+                            print_info(f"  └─ 检查文件: {file.name}")
+                            # 检查文件名是否匹配（至少匹配2个关键词）
+                            match_count = sum(1 for keyword in title_keywords if keyword in file.name.lower())
+                            if match_count >= 2:
+                                print_success(f"✅ 发现文件夹中的匹配视频: {folder.name}/{file.name} (匹配{match_count}个关键词)")
                                 return file, 'file'
                     
                     # 如果文件夹名包含关键词，可能整个文件夹都是相关的
-                    title_keywords = [kw for kw in title.lower().split() if len(kw) > 2][:4]
-                    if any(keyword in folder.name.lower() for keyword in title_keywords):
+                    folder_match_count = sum(1 for keyword in title_keywords if keyword in folder.name.lower())
+                    if folder_match_count >= 2:
                         # 检查文件夹是否有内容
                         if folder_contents.files:
-                            print_success(f"发现匹配的文件夹: {folder.name}")
+                            print_success(f"✅ 发现匹配的文件夹: {folder.name} (匹配{folder_match_count}个关键词)")
                             return folder, 'folder'
                             
                 except Exception as e:
@@ -430,6 +477,8 @@ def main():
     
     try:
         # 1. 登录 Seedr
+        print_info("开始登录 Seedr...")
+        sys.stdout.flush()  # 强制输出
         client = login_to_seedr()
         if not client:
             print_error("无法登录 Seedr，退出")
