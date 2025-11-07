@@ -1,0 +1,4035 @@
+[
+    {
+        "primary_title": "名侦探柯南",
+        "all_cn_names": [
+            "名侦探柯南"
+        ],
+        "jp_name": "名探偵コナン",
+        "begin_date": "1996-01-08",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/899",
+        "bangumi_id": 899,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/01/88/899_Q3F3X.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/01/88/899_Q3F3X.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/01/88/899_Q3F3X.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/01/88/899_Q3F3X.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/01/88/899_Q3F3X.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 10642,
+            "count": {
+                "10": 1109,
+                "9": 1114,
+                "8": 3022,
+                "7": 3487,
+                "6": 1366,
+                "5": 394,
+                "4": 74,
+                "3": 33,
+                "2": 11,
+                "1": 32
+            },
+            "score": 7.5
+        },
+        "rank": 794,
+        "collection": {
+            "doing": 10040
+        }
+    },
+    {
+        "primary_title": "航海王",
+        "all_cn_names": [
+            "航海王"
+        ],
+        "jp_name": "ONE PIECE",
+        "begin_date": "1999-10-20",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/975",
+        "bangumi_id": 975,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/92/97/975_YKuWd.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/92/97/975_YKuWd.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/92/97/975_YKuWd.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/92/97/975_YKuWd.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/92/97/975_YKuWd.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 13542,
+            "count": {
+                "10": 3781,
+                "9": 2602,
+                "8": 3511,
+                "7": 2147,
+                "6": 879,
+                "5": 343,
+                "4": 107,
+                "3": 38,
+                "2": 44,
+                "1": 90
+            },
+            "score": 8.3
+        },
+        "rank": 99,
+        "collection": {
+            "doing": 14695
+        }
+    },
+    {
+        "primary_title": "无职英雄 ～技能什么的毫无用处～",
+        "all_cn_names": [
+            "无职英雄 ～技能什么的毫无用处～"
+        ],
+        "jp_name": "無職の英雄 ～別にスキルなんか要らなかったんだが～",
+        "begin_date": "2025-10-01",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/458125",
+        "bangumi_id": 458125,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/92/d0/458125_KsU95.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/92/d0/458125_KsU95.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/92/d0/458125_KsU95.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/92/d0/458125_KsU95.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/92/d0/458125_KsU95.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 265,
+            "count": {
+                "10": 4,
+                "9": 1,
+                "8": 5,
+                "7": 16,
+                "6": 56,
+                "5": 96,
+                "4": 49,
+                "3": 16,
+                "2": 9,
+                "1": 13
+            },
+            "score": 4.9
+        },
+        "rank": 9212,
+        "collection": {
+            "doing": 1182
+        }
+    },
+    {
+        "primary_title": "Let's Play 充满任务的人生",
+        "all_cn_names": [
+            "Let's Play 充满任务的人生"
+        ],
+        "jp_name": "Let's Play クエストだらけのマイライフ",
+        "begin_date": "2025-10-01",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/460183",
+        "bangumi_id": 460183,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/b7/6a/460183_3FHfH.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/b7/6a/460183_3FHfH.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/b7/6a/460183_3FHfH.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/b7/6a/460183_3FHfH.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/b7/6a/460183_3FHfH.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 185,
+            "count": {
+                "10": 1,
+                "9": 2,
+                "8": 0,
+                "7": 3,
+                "6": 23,
+                "5": 40,
+                "4": 62,
+                "3": 29,
+                "2": 12,
+                "1": 13
+            },
+            "score": 4.1
+        },
+        "rank": 9490,
+        "collection": {
+            "doing": 463
+        }
+    },
+    {
+        "primary_title": "妖怪旅馆营业中 贰",
+        "all_cn_names": [
+            "妖怪旅馆营业中 贰"
+        ],
+        "jp_name": "かくりよの宿飯 弐",
+        "begin_date": "2025-10-01",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/492722",
+        "bangumi_id": 492722,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/11/54/492722_5u7UB.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/11/54/492722_5u7UB.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/11/54/492722_5u7UB.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/11/54/492722_5u7UB.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/11/54/492722_5u7UB.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 33,
+            "count": {
+                "10": 2,
+                "9": 1,
+                "8": 1,
+                "7": 3,
+                "6": 5,
+                "5": 13,
+                "4": 5,
+                "3": 1,
+                "2": 0,
+                "1": 2
+            },
+            "score": 5.4
+        },
+        "rank": null,
+        "collection": {
+            "doing": 114
+        }
+    },
+    {
+        "primary_title": "MUZIK TIGER In the Forest 第二季",
+        "all_cn_names": [
+            "MUZIK TIGER In the Forest 第二季"
+        ],
+        "jp_name": "MUZIK TIGER In the Forest 第2期",
+        "begin_date": "2025-10-01",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/568800",
+        "bangumi_id": 568800,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/a5/47/568800_iLVia.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/a5/47/568800_iLVia.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/a5/47/568800_iLVia.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/a5/47/568800_iLVia.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/a5/47/568800_iLVia.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {},
+        "rank": null,
+        "collection": {
+            "doing": 4
+        }
+    },
+    {
+        "primary_title": "熊出没之神奇宝物",
+        "all_cn_names": [
+            "熊出没之神奇宝物"
+        ],
+        "jp_name": "熊出没之神奇宝物",
+        "begin_date": "2025-10-01",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/587898",
+        "bangumi_id": 587898,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/21/0d/587898_6Z69G.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/21/0d/587898_6Z69G.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/21/0d/587898_6Z69G.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/21/0d/587898_6Z69G.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/21/0d/587898_6Z69G.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 3,
+            "count": {
+                "10": 1,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 1,
+                "5": 0,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 5.7
+        },
+        "rank": null,
+        "collection": {
+            "doing": 6
+        }
+    },
+    {
+        "primary_title": "Mafiosa",
+        "all_cn_names": [
+            "Mafiosa"
+        ],
+        "jp_name": "マフィオーザ",
+        "begin_date": "2025-10-01",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/590629",
+        "bangumi_id": 590629,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/b1/dd/590629_0d4RR.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/b1/dd/590629_0d4RR.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/b1/dd/590629_0d4RR.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/b1/dd/590629_0d4RR.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/b1/dd/590629_0d4RR.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 15,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 1,
+                "7": 4,
+                "6": 0,
+                "5": 8,
+                "4": 0,
+                "3": 1,
+                "2": 0,
+                "1": 1
+            },
+            "score": 5.3
+        },
+        "rank": null,
+        "collection": {
+            "doing": 3
+        }
+    },
+    {
+        "primary_title": "SEALOOK",
+        "all_cn_names": [],
+        "jp_name": "SEALOOK",
+        "begin_date": "2025-10-01",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/600439",
+        "bangumi_id": 600439,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/7a/2f/600439_e3bge.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/7a/2f/600439_e3bge.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/7a/2f/600439_e3bge.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/7a/2f/600439_e3bge.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/7a/2f/600439_e3bge.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 1,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 0,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 1
+        },
+        "rank": null,
+        "collection": {
+            "doing": 2
+        }
+    },
+    {
+        "primary_title": "恶食千金与狂血公爵",
+        "all_cn_names": [
+            "恶食千金与狂血公爵"
+        ],
+        "jp_name": "悪食令嬢と狂血公爵",
+        "begin_date": "2025-10-02",
+        "weekday": "周四",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/520698",
+        "bangumi_id": 520698,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/8c/d4/520698_Bt75C.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/8c/d4/520698_Bt75C.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/8c/d4/520698_Bt75C.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/8c/d4/520698_Bt75C.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/8c/d4/520698_Bt75C.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 146,
+            "count": {
+                "10": 2,
+                "9": 2,
+                "8": 3,
+                "7": 18,
+                "6": 55,
+                "5": 45,
+                "4": 13,
+                "3": 4,
+                "2": 2,
+                "1": 2
+            },
+            "score": 5.6
+        },
+        "rank": 7693,
+        "collection": {
+            "doing": 599
+        }
+    },
+    {
+        "primary_title": "对我垂涎欲滴的非人少女",
+        "all_cn_names": [
+            "对我垂涎欲滴的非人少女"
+        ],
+        "jp_name": "私を喰べたい、ひとでなし",
+        "begin_date": "2025-10-02",
+        "weekday": "周四",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/520842",
+        "bangumi_id": 520842,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/2c/af/520842_J06fL.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/2c/af/520842_J06fL.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/2c/af/520842_J06fL.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/2c/af/520842_J06fL.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/2c/af/520842_J06fL.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 996,
+            "count": {
+                "10": 18,
+                "9": 24,
+                "8": 150,
+                "7": 429,
+                "6": 270,
+                "5": 66,
+                "4": 29,
+                "3": 2,
+                "2": 4,
+                "1": 4
+            },
+            "score": 6.7
+        },
+        "rank": 3901,
+        "collection": {
+            "doing": 5011
+        }
+    },
+    {
+        "primary_title": "笨拙之极的前辈。",
+        "all_cn_names": [
+            "笨拙之极的前辈。"
+        ],
+        "jp_name": "不器用な先輩。",
+        "begin_date": "2025-10-02",
+        "weekday": "周四",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/529006",
+        "bangumi_id": 529006,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/41/7e/529006_5tX5x.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/41/7e/529006_5tX5x.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/41/7e/529006_5tX5x.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/41/7e/529006_5tX5x.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/41/7e/529006_5tX5x.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 196,
+            "count": {
+                "10": 3,
+                "9": 1,
+                "8": 1,
+                "7": 17,
+                "6": 61,
+                "5": 75,
+                "4": 24,
+                "3": 6,
+                "2": 4,
+                "1": 4
+            },
+            "score": 5.3
+        },
+        "rank": 8637,
+        "collection": {
+            "doing": 844
+        }
+    },
+    {
+        "primary_title": "星辰光辉更胜太阳",
+        "all_cn_names": [
+            "星辰光辉更胜太阳"
+        ],
+        "jp_name": "太陽よりも眩しい星",
+        "begin_date": "2025-10-02",
+        "weekday": "周四",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/536711",
+        "bangumi_id": 536711,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/e1/33/536711_lMf6C.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/e1/33/536711_lMf6C.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/e1/33/536711_lMf6C.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/e1/33/536711_lMf6C.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/e1/33/536711_lMf6C.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 103,
+            "count": {
+                "10": 1,
+                "9": 1,
+                "8": 3,
+                "7": 14,
+                "6": 29,
+                "5": 31,
+                "4": 16,
+                "3": 4,
+                "2": 1,
+                "1": 3
+            },
+            "score": 5.3
+        },
+        "rank": 7854,
+        "collection": {
+            "doing": 315
+        }
+    },
+    {
+        "primary_title": "元祖！BanG Dream Chan",
+        "all_cn_names": [
+            "元祖！BanG Dream Chan"
+        ],
+        "jp_name": "元祖！バンドリちゃん",
+        "begin_date": "2025-10-02",
+        "weekday": "周四",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/540449",
+        "bangumi_id": 540449,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/07/4f/540449_rP1Cp.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/07/4f/540449_rP1Cp.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/07/4f/540449_rP1Cp.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/07/4f/540449_rP1Cp.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/07/4f/540449_rP1Cp.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 374,
+            "count": {
+                "10": 11,
+                "9": 16,
+                "8": 75,
+                "7": 186,
+                "6": 68,
+                "5": 10,
+                "4": 4,
+                "3": 1,
+                "2": 1,
+                "1": 2
+            },
+            "score": 7.1
+        },
+        "rank": 2342,
+        "collection": {
+            "doing": 1872
+        }
+    },
+    {
+        "primary_title": "考拉绘日记",
+        "all_cn_names": [
+            "考拉绘日记"
+        ],
+        "jp_name": "コアラ絵日記",
+        "begin_date": "2025-10-02",
+        "weekday": "周四",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/564980",
+        "bangumi_id": 564980,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/59/35/564980_hwOWc.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/59/35/564980_hwOWc.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/59/35/564980_hwOWc.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/59/35/564980_hwOWc.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/59/35/564980_hwOWc.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 12,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 1,
+                "6": 4,
+                "5": 2,
+                "4": 2,
+                "3": 2,
+                "2": 0,
+                "1": 1
+            },
+            "score": 4.7
+        },
+        "rank": null,
+        "collection": {
+            "doing": 37
+        }
+    },
+    {
+        "primary_title": "小泉八云的怪谈世界",
+        "all_cn_names": [
+            "小泉八云的怪谈世界"
+        ],
+        "jp_name": "小泉八雲のKWAIDANの世界",
+        "begin_date": "2025-10-02",
+        "weekday": "周四",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/583974",
+        "bangumi_id": 583974,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/99/75/583974_0OKHb.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/99/75/583974_0OKHb.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/99/75/583974_0OKHb.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/99/75/583974_0OKHb.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/99/75/583974_0OKHb.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 2,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 0,
+                "4": 0,
+                "3": 1,
+                "2": 0,
+                "1": 1
+            },
+            "score": 2
+        },
+        "rank": null,
+        "collection": {
+            "doing": 10
+        }
+    },
+    {
+        "primary_title": "森林家族 芙蕾雅的奇妙时光",
+        "all_cn_names": [
+            "森林家族 芙蕾雅的奇妙时光"
+        ],
+        "jp_name": "シルバニアファミリー フレアのワンダーデイズ",
+        "begin_date": "2025-10-02",
+        "weekday": "周四",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/585457",
+        "bangumi_id": 585457,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/9e/41/585457_C851a.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/9e/41/585457_C851a.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/9e/41/585457_C851a.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/9e/41/585457_C851a.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/9e/41/585457_C851a.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {},
+        "rank": null,
+        "collection": {
+            "doing": 3
+        }
+    },
+    {
+        "primary_title": "アニラとココラ",
+        "all_cn_names": [],
+        "jp_name": "アニラとココラ",
+        "begin_date": "2025-10-02",
+        "weekday": "周四",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/588026",
+        "bangumi_id": 588026,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/8e/b6/588026_w4Yht.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/8e/b6/588026_w4Yht.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/8e/b6/588026_w4Yht.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/8e/b6/588026_w4Yht.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/8e/b6/588026_w4Yht.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 4,
+            "count": {
+                "10": 1,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 1,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 2
+            },
+            "score": 4.3
+        },
+        "rank": null,
+        "collection": {
+            "doing": 11
+        }
+    },
+    {
+        "primary_title": "变身圣诞老人",
+        "all_cn_names": [
+            "变身圣诞老人"
+        ],
+        "jp_name": "SANDA",
+        "begin_date": "2025-10-03",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/503303",
+        "bangumi_id": 503303,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/50/5d/503303_ilQah.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/50/5d/503303_ilQah.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/50/5d/503303_ilQah.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/50/5d/503303_ilQah.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/50/5d/503303_ilQah.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 528,
+            "count": {
+                "10": 5,
+                "9": 7,
+                "8": 48,
+                "7": 186,
+                "6": 191,
+                "5": 53,
+                "4": 19,
+                "3": 14,
+                "2": 1,
+                "1": 4
+            },
+            "score": 6.3
+        },
+        "rank": 5947,
+        "collection": {
+            "doing": 2630
+        }
+    },
+    {
+        "primary_title": "最后可以再拜托您一件事吗？",
+        "all_cn_names": [
+            "最后可以再拜托您一件事吗？"
+        ],
+        "jp_name": "最後にひとつだけお願いしてもよろしいでしょうか",
+        "begin_date": "2025-10-03",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/513348",
+        "bangumi_id": 513348,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/e9/4c/513348_jJYyy.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/e9/4c/513348_jJYyy.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/e9/4c/513348_jJYyy.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/e9/4c/513348_jJYyy.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/e9/4c/513348_jJYyy.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 399,
+            "count": {
+                "10": 7,
+                "9": 0,
+                "8": 38,
+                "7": 109,
+                "6": 183,
+                "5": 45,
+                "4": 12,
+                "3": 2,
+                "2": 0,
+                "1": 3
+            },
+            "score": 6.3
+        },
+        "rank": 5881,
+        "collection": {
+            "doing": 1890
+        }
+    },
+    {
+        "primary_title": "差点在迷宫深处被信任的伙伴杀掉，但靠着天赐技能「无限扭蛋」获得等级9999的伙伴，我要向前队友和世界展开复仇&amp;「给他们好看！」",
+        "all_cn_names": [
+            "差点在迷宫深处被信任的伙伴杀掉，但靠着天赐技能「无限扭蛋」获得等级9999的伙伴，我要向前队友和世界展开复仇&amp;「给他们好看！」"
+        ],
+        "jp_name": "信じていた仲間達にダンジョン奥地で殺されかけたがギフト『無限ガチャ』でレベル9999の仲間達を手に入れて元パーティーメンバーと世界に復讐＆『ざまぁ！』します！",
+        "begin_date": "2025-10-03",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/524195",
+        "bangumi_id": 524195,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/41/c3/524195_PHt85.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/41/c3/524195_PHt85.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/41/c3/524195_PHt85.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/41/c3/524195_PHt85.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/41/c3/524195_PHt85.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 343,
+            "count": {
+                "10": 7,
+                "9": 4,
+                "8": 11,
+                "7": 32,
+                "6": 94,
+                "5": 104,
+                "4": 52,
+                "3": 21,
+                "2": 10,
+                "1": 8
+            },
+            "score": 5.3
+        },
+        "rank": 8905,
+        "collection": {
+            "doing": 1707
+        }
+    },
+    {
+        "primary_title": "娑婆气",
+        "all_cn_names": [
+            "娑婆气"
+        ],
+        "jp_name": "しゃばけ",
+        "begin_date": "2025-10-03",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/525660",
+        "bangumi_id": 525660,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/1f/86/525660_A825R.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/1f/86/525660_A825R.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/1f/86/525660_A825R.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/1f/86/525660_A825R.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/1f/86/525660_A825R.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 111,
+            "count": {
+                "10": 1,
+                "9": 2,
+                "8": 1,
+                "7": 12,
+                "6": 32,
+                "5": 35,
+                "4": 14,
+                "3": 7,
+                "2": 3,
+                "1": 4
+            },
+            "score": 5.2
+        },
+        "rank": 8349,
+        "collection": {
+            "doing": 356
+        }
+    },
+    {
+        "primary_title": "百姓贵族 第三季",
+        "all_cn_names": [
+            "百姓贵族 第三季"
+        ],
+        "jp_name": "百姓貴族 3rd Season",
+        "begin_date": "2025-10-03",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/529694",
+        "bangumi_id": 529694,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/c4/ce/529694_xh2Y9.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/c4/ce/529694_xh2Y9.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/c4/ce/529694_xh2Y9.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/c4/ce/529694_xh2Y9.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/c4/ce/529694_xh2Y9.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 14,
+            "count": {
+                "10": 1,
+                "9": 1,
+                "8": 2,
+                "7": 2,
+                "6": 3,
+                "5": 1,
+                "4": 0,
+                "3": 1,
+                "2": 0,
+                "1": 3
+            },
+            "score": 5.6
+        },
+        "rank": null,
+        "collection": {
+            "doing": 71
+        }
+    },
+    {
+        "primary_title": "野原广志午餐流派",
+        "all_cn_names": [
+            "野原广志午餐流派"
+        ],
+        "jp_name": "野原ひろし 昼メシの流儀",
+        "begin_date": "2025-10-03",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/543189",
+        "bangumi_id": 543189,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/96/8e/543189_UdZaU.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/96/8e/543189_UdZaU.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/96/8e/543189_UdZaU.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/96/8e/543189_UdZaU.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/96/8e/543189_UdZaU.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 206,
+            "count": {
+                "10": 3,
+                "9": 1,
+                "8": 4,
+                "7": 49,
+                "6": 66,
+                "5": 42,
+                "4": 17,
+                "3": 11,
+                "2": 5,
+                "1": 8
+            },
+            "score": 5.5
+        },
+        "rank": 8153,
+        "collection": {
+            "doing": 694
+        }
+    },
+    {
+        "primary_title": "神龙少女",
+        "all_cn_names": [
+            "神龙少女"
+        ],
+        "jp_name": "용한소녀",
+        "begin_date": "2025-10-03",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/575170",
+        "bangumi_id": 575170,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/fc/40/575170_pvSpN.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/fc/40/575170_pvSpN.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/fc/40/575170_pvSpN.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/fc/40/575170_pvSpN.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/fc/40/575170_pvSpN.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 1,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 0,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 1
+        },
+        "rank": null,
+        "collection": {
+            "doing": 8
+        }
+    },
+    {
+        "primary_title": "完美世界 第六季",
+        "all_cn_names": [],
+        "jp_name": "完美世界 第六季",
+        "begin_date": "2025-10-03",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/577198",
+        "bangumi_id": 577198,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/cb/95/577198_doojN.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/cb/95/577198_doojN.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/cb/95/577198_doojN.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/cb/95/577198_doojN.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/cb/95/577198_doojN.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 18,
+            "count": {
+                "10": 1,
+                "9": 2,
+                "8": 2,
+                "7": 3,
+                "6": 6,
+                "5": 2,
+                "4": 2,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 6.6
+        },
+        "rank": null,
+        "collection": {
+            "doing": 78
+        }
+    },
+    {
+        "primary_title": "GANGLION",
+        "all_cn_names": [
+            "GANGLION"
+        ],
+        "jp_name": "ガングリオン",
+        "begin_date": "2025-10-03",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/581598",
+        "bangumi_id": 581598,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/da/ba/581598_O9Ce9.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/da/ba/581598_O9Ce9.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/da/ba/581598_O9Ce9.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/da/ba/581598_O9Ce9.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/da/ba/581598_O9Ce9.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 24,
+            "count": {
+                "10": 0,
+                "9": 1,
+                "8": 1,
+                "7": 4,
+                "6": 7,
+                "5": 4,
+                "4": 3,
+                "3": 2,
+                "2": 1,
+                "1": 1
+            },
+            "score": 5.3
+        },
+        "rank": null,
+        "collection": {
+            "doing": 133
+        }
+    },
+    {
+        "primary_title": "朋友的妹妹只喜欢烦我",
+        "all_cn_names": [
+            "朋友的妹妹只喜欢烦我"
+        ],
+        "jp_name": "友達の妹が俺にだけウザい",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/326859",
+        "bangumi_id": 326859,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/82/62/326859_1pOHy.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/82/62/326859_1pOHy.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/82/62/326859_1pOHy.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/82/62/326859_1pOHy.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/82/62/326859_1pOHy.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 535,
+            "count": {
+                "10": 6,
+                "9": 2,
+                "8": 21,
+                "7": 82,
+                "6": 201,
+                "5": 140,
+                "4": 56,
+                "3": 15,
+                "2": 6,
+                "1": 6
+            },
+            "score": 5.6
+        },
+        "rank": 8364,
+        "collection": {
+            "doing": 2697
+        }
+    },
+    {
+        "primary_title": "致不灭的你 第三季",
+        "all_cn_names": [
+            "致不灭的你 第三季"
+        ],
+        "jp_name": "不滅のあなたへ Season 3",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/424242",
+        "bangumi_id": 424242,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/ea/90/424242_OTvOQ.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/ea/90/424242_OTvOQ.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/ea/90/424242_OTvOQ.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/ea/90/424242_OTvOQ.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/ea/90/424242_OTvOQ.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 166,
+            "count": {
+                "10": 5,
+                "9": 4,
+                "8": 25,
+                "7": 81,
+                "6": 37,
+                "5": 9,
+                "4": 1,
+                "3": 0,
+                "2": 1,
+                "1": 3
+            },
+            "score": 6.8
+        },
+        "rank": 3184,
+        "collection": {
+            "doing": 1070
+        }
+    },
+    {
+        "primary_title": "婚戒物语 第二季",
+        "all_cn_names": [
+            "婚戒物语 第二季"
+        ],
+        "jp_name": "結婚指輪物語Ⅱ",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/486311",
+        "bangumi_id": 486311,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/8a/53/486311_wa4F4.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/8a/53/486311_wa4F4.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/8a/53/486311_wa4F4.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/8a/53/486311_wa4F4.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/8a/53/486311_wa4F4.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 92,
+            "count": {
+                "10": 3,
+                "9": 1,
+                "8": 3,
+                "7": 9,
+                "6": 23,
+                "5": 29,
+                "4": 15,
+                "3": 5,
+                "2": 1,
+                "1": 3
+            },
+            "score": 5.3
+        },
+        "rank": 7726,
+        "collection": {
+            "doing": 462
+        }
+    },
+    {
+        "primary_title": "间谍过家家 第三季",
+        "all_cn_names": [
+            "间谍过家家 第三季"
+        ],
+        "jp_name": "SPY×FAMILY Season 3",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/498378",
+        "bangumi_id": 498378,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/3d/79/498378_3ycrL.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/3d/79/498378_3ycrL.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/3d/79/498378_3ycrL.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/3d/79/498378_3ycrL.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/3d/79/498378_3ycrL.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 1019,
+            "count": {
+                "10": 42,
+                "9": 31,
+                "8": 327,
+                "7": 494,
+                "6": 98,
+                "5": 19,
+                "4": 4,
+                "3": 1,
+                "2": 1,
+                "1": 2
+            },
+            "score": 7.3
+        },
+        "rank": 1327,
+        "collection": {
+            "doing": 6531
+        }
+    },
+    {
+        "primary_title": "野生的大魔王出现了！",
+        "all_cn_names": [
+            "野生的大魔王出现了！"
+        ],
+        "jp_name": "野生のラスボスが現れた！",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/509355",
+        "bangumi_id": 509355,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/7f/7f/509355_pL64P.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/7f/7f/509355_pL64P.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/7f/7f/509355_pL64P.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/7f/7f/509355_pL64P.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/7f/7f/509355_pL64P.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 489,
+            "count": {
+                "10": 7,
+                "9": 5,
+                "8": 40,
+                "7": 188,
+                "6": 179,
+                "5": 47,
+                "4": 14,
+                "3": 5,
+                "2": 1,
+                "1": 3
+            },
+            "score": 6.4
+        },
+        "rank": 5408,
+        "collection": {
+            "doing": 2753
+        }
+    },
+    {
+        "primary_title": "我的英雄学院 最终季",
+        "all_cn_names": [
+            "我的英雄学院 最终季"
+        ],
+        "jp_name": "僕のヒーローアカデミア FINAL SEASON",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/518413",
+        "bangumi_id": 518413,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/5d/48/518413_ycuo9.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/5d/48/518413_ycuo9.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/5d/48/518413_ycuo9.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/5d/48/518413_ycuo9.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/5d/48/518413_ycuo9.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 150,
+            "count": {
+                "10": 19,
+                "9": 7,
+                "8": 22,
+                "7": 12,
+                "6": 9,
+                "5": 5,
+                "4": 5,
+                "3": 2,
+                "2": 3,
+                "1": 66
+            },
+            "score": 4.6
+        },
+        "rank": 9222,
+        "collection": {
+            "doing": 315
+        }
+    },
+    {
+        "primary_title": "乱马1/2 第二季",
+        "all_cn_names": [
+            "乱马1/2 第二季"
+        ],
+        "jp_name": "らんま1/2 第2期",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/529966",
+        "bangumi_id": 529966,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/a3/5e/529966_uzkZd.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/a3/5e/529966_uzkZd.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/a3/5e/529966_uzkZd.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/a3/5e/529966_uzkZd.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/a3/5e/529966_uzkZd.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 551,
+            "count": {
+                "10": 14,
+                "9": 22,
+                "8": 230,
+                "7": 236,
+                "6": 31,
+                "5": 11,
+                "4": 0,
+                "3": 2,
+                "2": 1,
+                "1": 4
+            },
+            "score": 7.4
+        },
+        "rank": 1161,
+        "collection": {
+            "doing": 3134
+        }
+    },
+    {
+        "primary_title": "科学×冒险与生存！ 第二季",
+        "all_cn_names": [
+            "科学×冒险与生存！ 第二季"
+        ],
+        "jp_name": "科学×冒険サバイバル！ 第2シリーズ",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/536878",
+        "bangumi_id": 536878,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/aa/8d/536878_81ewO.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/aa/8d/536878_81ewO.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/aa/8d/536878_81ewO.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/aa/8d/536878_81ewO.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/aa/8d/536878_81ewO.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 7,
+            "count": {
+                "10": 0,
+                "9": 1,
+                "8": 0,
+                "7": 1,
+                "6": 1,
+                "5": 2,
+                "4": 0,
+                "3": 1,
+                "2": 0,
+                "1": 1
+            },
+            "score": 5.1
+        },
+        "rank": null,
+        "collection": {
+            "doing": 17
+        }
+    },
+    {
+        "primary_title": "末世二轮之旅",
+        "all_cn_names": [
+            "末世二轮之旅"
+        ],
+        "jp_name": "終末ツーリング",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/539395",
+        "bangumi_id": 539395,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/98/ec/539395_I5958.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/98/ec/539395_I5958.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/98/ec/539395_I5958.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/98/ec/539395_I5958.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/98/ec/539395_I5958.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 433,
+            "count": {
+                "10": 4,
+                "9": 6,
+                "8": 39,
+                "7": 181,
+                "6": 140,
+                "5": 45,
+                "4": 13,
+                "3": 3,
+                "2": 0,
+                "1": 2
+            },
+            "score": 6.5
+        },
+        "rank": 5092,
+        "collection": {
+            "doing": 2267
+        }
+    },
+    {
+        "primary_title": "东岛丹三郎想成为假面骑士",
+        "all_cn_names": [
+            "东岛丹三郎想成为假面骑士"
+        ],
+        "jp_name": "東島丹三郎は仮面ライダーになりたい",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/542203",
+        "bangumi_id": 542203,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/58/51/542203_YYfsF.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/58/51/542203_YYfsF.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/58/51/542203_YYfsF.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/58/51/542203_YYfsF.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/58/51/542203_YYfsF.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 943,
+            "count": {
+                "10": 20,
+                "9": 44,
+                "8": 365,
+                "7": 388,
+                "6": 92,
+                "5": 15,
+                "4": 13,
+                "3": 2,
+                "2": 0,
+                "1": 4
+            },
+            "score": 7.3
+        },
+        "rank": 1328,
+        "collection": {
+            "doing": 4454
+        }
+    },
+    {
+        "primary_title": "不动声色的柏田与喜形于色的太田",
+        "all_cn_names": [
+            "不动声色的柏田与喜形于色的太田"
+        ],
+        "jp_name": "顔に出ない柏田さんと顔に出る太田君",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/544104",
+        "bangumi_id": 544104,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/3e/62/544104_z9082.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/3e/62/544104_z9082.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/3e/62/544104_z9082.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/3e/62/544104_z9082.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/3e/62/544104_z9082.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 327,
+            "count": {
+                "10": 6,
+                "9": 4,
+                "8": 12,
+                "7": 62,
+                "6": 115,
+                "5": 65,
+                "4": 40,
+                "3": 15,
+                "2": 5,
+                "1": 3
+            },
+            "score": 5.7
+        },
+        "rank": 8023,
+        "collection": {
+            "doing": 1668
+        }
+    },
+    {
+        "primary_title": "队友太弱所以贯彻辅助的宫廷魔法师，惨遭流放目标却是最强",
+        "all_cn_names": [
+            "队友太弱所以贯彻辅助的宫廷魔法师，惨遭流放目标却是最强"
+        ],
+        "jp_name": "味方が弱すぎて補助魔法に徹していた宮廷魔法師、追放されて最強を目指す",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/545842",
+        "bangumi_id": 545842,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/ea/df/545842_AxVDu.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/ea/df/545842_AxVDu.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/ea/df/545842_AxVDu.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/ea/df/545842_AxVDu.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/ea/df/545842_AxVDu.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 142,
+            "count": {
+                "10": 1,
+                "9": 1,
+                "8": 0,
+                "7": 8,
+                "6": 27,
+                "5": 54,
+                "4": 28,
+                "3": 13,
+                "2": 5,
+                "1": 5
+            },
+            "score": 4.7
+        },
+        "rank": 9071,
+        "collection": {
+            "doing": 659
+        }
+    },
+    {
+        "primary_title": "王者天下 第六季",
+        "all_cn_names": [
+            "王者天下 第六季"
+        ],
+        "jp_name": "キングダム 第6シリーズ",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/553106",
+        "bangumi_id": 553106,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/50/9a/553106_Uktr5.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/50/9a/553106_Uktr5.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/50/9a/553106_Uktr5.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/50/9a/553106_Uktr5.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/50/9a/553106_Uktr5.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 69,
+            "count": {
+                "10": 6,
+                "9": 5,
+                "8": 36,
+                "7": 15,
+                "6": 2,
+                "5": 1,
+                "4": 0,
+                "3": 1,
+                "2": 0,
+                "1": 3
+            },
+            "score": 7.6
+        },
+        "rank": 1255,
+        "collection": {
+            "doing": 199
+        }
+    },
+    {
+        "primary_title": "JOCHUM シーズン2",
+        "all_cn_names": [],
+        "jp_name": "JOCHUM シーズン2",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/581987",
+        "bangumi_id": 581987,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/94/1c/581987_EhL4u.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/94/1c/581987_EhL4u.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/94/1c/581987_EhL4u.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/94/1c/581987_EhL4u.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/94/1c/581987_EhL4u.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 2,
+            "count": {
+                "10": 1,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 0,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 5.5
+        },
+        "rank": null,
+        "collection": {
+            "doing": 3
+        }
+    },
+    {
+        "primary_title": "涩谷♡八 第四部分",
+        "all_cn_names": [
+            "涩谷♡八 第四部分"
+        ],
+        "jp_name": "SHIBUYA♡HACHI 第4クール",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/582915",
+        "bangumi_id": 582915,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/b8/1e/582915_Q774W.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/b8/1e/582915_Q774W.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/b8/1e/582915_Q774W.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/b8/1e/582915_Q774W.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/b8/1e/582915_Q774W.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 3,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 0,
+                "4": 0,
+                "3": 1,
+                "2": 0,
+                "1": 2
+            },
+            "score": 1.7
+        },
+        "rank": null,
+        "collection": {
+            "doing": 3
+        }
+    },
+    {
+        "primary_title": "启运丹田：开局签到至尊丹田",
+        "all_cn_names": [],
+        "jp_name": "启运丹田：开局签到至尊丹田",
+        "begin_date": "2025-10-04",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/586029",
+        "bangumi_id": 586029,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/d3/8e/586029_R2g5P.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/d3/8e/586029_R2g5P.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/d3/8e/586029_R2g5P.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/d3/8e/586029_R2g5P.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/d3/8e/586029_R2g5P.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {},
+        "rank": null,
+        "collection": {
+            "doing": 4
+        }
+    },
+    {
+        "primary_title": "罪恶之渊",
+        "all_cn_names": [
+            "罪恶之渊"
+        ],
+        "jp_name": "ギルティホール",
+        "begin_date": "2025-10-05",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/516604",
+        "bangumi_id": 516604,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/30/a2/516604_Cy2CS.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/30/a2/516604_Cy2CS.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/30/a2/516604_Cy2CS.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/30/a2/516604_Cy2CS.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/30/a2/516604_Cy2CS.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 19,
+            "count": {
+                "10": 2,
+                "9": 0,
+                "8": 0,
+                "7": 2,
+                "6": 5,
+                "5": 4,
+                "4": 4,
+                "3": 1,
+                "2": 1,
+                "1": 0
+            },
+            "score": 5.5
+        },
+        "rank": null,
+        "collection": {
+            "doing": 151
+        }
+    },
+    {
+        "primary_title": "蓝色管弦乐 第二季",
+        "all_cn_names": [
+            "蓝色管弦乐 第二季"
+        ],
+        "jp_name": "青のオーケストラ 第2期",
+        "begin_date": "2025-10-05",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/458673",
+        "bangumi_id": 458673,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/5b/7c/458673_2u555.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/5b/7c/458673_2u555.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/5b/7c/458673_2u555.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/5b/7c/458673_2u555.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/5b/7c/458673_2u555.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 65,
+            "count": {
+                "10": 2,
+                "9": 2,
+                "8": 1,
+                "7": 10,
+                "6": 23,
+                "5": 18,
+                "4": 2,
+                "3": 3,
+                "2": 1,
+                "1": 3
+            },
+            "score": 5.6
+        },
+        "rank": 6525,
+        "collection": {
+            "doing": 248
+        }
+    },
+    {
+        "primary_title": "转生后的我成了英雄爸爸和精灵妈妈的女儿",
+        "all_cn_names": [
+            "转生后的我成了英雄爸爸和精灵妈妈的女儿"
+        ],
+        "jp_name": "父は英雄、母は精霊、娘の私は転生者。",
+        "begin_date": "2025-10-05",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/476323",
+        "bangumi_id": 476323,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/6b/ea/476323_2162T.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/6b/ea/476323_2162T.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/6b/ea/476323_2162T.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/6b/ea/476323_2162T.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/6b/ea/476323_2162T.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 203,
+            "count": {
+                "10": 2,
+                "9": 2,
+                "8": 3,
+                "7": 13,
+                "6": 49,
+                "5": 57,
+                "4": 33,
+                "3": 21,
+                "2": 11,
+                "1": 12
+            },
+            "score": 4.7
+        },
+        "rank": 9242,
+        "collection": {
+            "doing": 932
+        }
+    },
+    {
+        "primary_title": "人形机器人玛丽",
+        "all_cn_names": [
+            "人形机器人玛丽"
+        ],
+        "jp_name": "機械じかけのマリー",
+        "begin_date": "2025-10-05",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/507078",
+        "bangumi_id": 507078,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/6a/ba/507078_KITIj.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/6a/ba/507078_KITIj.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/6a/ba/507078_KITIj.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/6a/ba/507078_KITIj.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/6a/ba/507078_KITIj.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 309,
+            "count": {
+                "10": 5,
+                "9": 2,
+                "8": 7,
+                "7": 24,
+                "6": 103,
+                "5": 110,
+                "4": 36,
+                "3": 11,
+                "2": 8,
+                "1": 3
+            },
+            "score": 5.4
+        },
+        "rank": 8711,
+        "collection": {
+            "doing": 1370
+        }
+    },
+    {
+        "primary_title": "赛马娘 芦毛灰姑娘 第2部分",
+        "all_cn_names": [
+            "赛马娘 芦毛灰姑娘 第2部分"
+        ],
+        "jp_name": "ウマ娘 シンデレラグレイ 第2クール",
+        "begin_date": "2025-10-05",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/530377",
+        "bangumi_id": 530377,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/f8/ee/530377_sLCN8.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/f8/ee/530377_sLCN8.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/f8/ee/530377_sLCN8.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/f8/ee/530377_sLCN8.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/f8/ee/530377_sLCN8.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 723,
+            "count": {
+                "10": 16,
+                "9": 11,
+                "8": 111,
+                "7": 382,
+                "6": 154,
+                "5": 22,
+                "4": 15,
+                "3": 3,
+                "2": 2,
+                "1": 7
+            },
+            "score": 6.8
+        },
+        "rank": 3295,
+        "collection": {
+            "doing": 4607
+        }
+    },
+    {
+        "primary_title": "小阿尔玛想要成为家人",
+        "all_cn_names": [
+            "小阿尔玛想要成为家人"
+        ],
+        "jp_name": "アルマちゃんは家族になりたい",
+        "begin_date": "2025-10-05",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/533442",
+        "bangumi_id": 533442,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/a7/64/533442_MAHic.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/a7/64/533442_MAHic.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/a7/64/533442_MAHic.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/a7/64/533442_MAHic.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/a7/64/533442_MAHic.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 332,
+            "count": {
+                "10": 6,
+                "9": 5,
+                "8": 33,
+                "7": 137,
+                "6": 112,
+                "5": 31,
+                "4": 3,
+                "3": 2,
+                "2": 0,
+                "1": 3
+            },
+            "score": 6.6
+        },
+        "rank": 4543,
+        "collection": {
+            "doing": 1696
+        }
+    },
+    {
+        "primary_title": "小手指同学，请别乱摸",
+        "all_cn_names": [
+            "小手指同学，请别乱摸"
+        ],
+        "jp_name": "さわらないで小手指くん",
+        "begin_date": "2025-10-05",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/541547",
+        "bangumi_id": 541547,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/23/3e/541547_VC8lh.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/23/3e/541547_VC8lh.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/23/3e/541547_VC8lh.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/23/3e/541547_VC8lh.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/23/3e/541547_VC8lh.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 236,
+            "count": {
+                "10": 4,
+                "9": 2,
+                "8": 4,
+                "7": 34,
+                "6": 90,
+                "5": 72,
+                "4": 19,
+                "3": 5,
+                "2": 2,
+                "1": 4
+            },
+            "score": 5.6
+        },
+        "rank": 8002,
+        "collection": {
+            "doing": 1424
+        }
+    },
+    {
+        "primary_title": "数码宝贝 BEATBREAK",
+        "all_cn_names": [
+            "数码宝贝 BEATBREAK"
+        ],
+        "jp_name": "DIGIMON BEATBREAK",
+        "begin_date": "2025-10-05",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/545499",
+        "bangumi_id": 545499,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/54/6b/545499_E4jCo.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/54/6b/545499_E4jCo.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/54/6b/545499_E4jCo.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/54/6b/545499_E4jCo.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/54/6b/545499_E4jCo.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 191,
+            "count": {
+                "10": 3,
+                "9": 0,
+                "8": 14,
+                "7": 73,
+                "6": 69,
+                "5": 19,
+                "4": 9,
+                "3": 2,
+                "2": 0,
+                "1": 2
+            },
+            "score": 6.3
+        },
+        "rank": 5420,
+        "collection": {
+            "doing": 1034
+        }
+    },
+    {
+        "primary_title": "微笑朋友 第三季",
+        "all_cn_names": [
+            "微笑朋友 第三季"
+        ],
+        "jp_name": "Smiling Friends Season 3",
+        "begin_date": "2025-10-05",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/564363",
+        "bangumi_id": 564363,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/28/79/564363_7Lt2Q.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/28/79/564363_7Lt2Q.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/28/79/564363_7Lt2Q.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/28/79/564363_7Lt2Q.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/28/79/564363_7Lt2Q.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {},
+        "rank": null,
+        "collection": {
+            "doing": 1
+        }
+    },
+    {
+        "primary_title": "SI-VIS：英雄之声",
+        "all_cn_names": [
+            "SI-VIS：英雄之声"
+        ],
+        "jp_name": "SI-VIS: The Sound of Heroes",
+        "begin_date": "2025-10-05",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/573897",
+        "bangumi_id": 573897,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/f4/38/573897_l63BL.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/f4/38/573897_l63BL.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/f4/38/573897_l63BL.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/f4/38/573897_l63BL.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/f4/38/573897_l63BL.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 405,
+            "count": {
+                "10": 1,
+                "9": 1,
+                "8": 6,
+                "7": 64,
+                "6": 165,
+                "5": 117,
+                "4": 27,
+                "3": 14,
+                "2": 5,
+                "1": 5
+            },
+            "score": 5.6
+        },
+        "rank": 8426,
+        "collection": {
+            "doing": 1647
+        }
+    },
+    {
+        "primary_title": "肥志百科 第13季",
+        "all_cn_names": [],
+        "jp_name": "肥志百科 第13季",
+        "begin_date": "2025-10-05",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/589204",
+        "bangumi_id": 589204,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/14/12/589204_kKSyr.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/14/12/589204_kKSyr.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/14/12/589204_kKSyr.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/14/12/589204_kKSyr.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/14/12/589204_kKSyr.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {},
+        "rank": null,
+        "collection": {}
+    },
+    {
+        "primary_title": "小手指同学，请别乱摸 迷你动画",
+        "all_cn_names": [
+            "小手指同学，请别乱摸 迷你动画"
+        ],
+        "jp_name": "さわらないで小手指くん ミニアニメ",
+        "begin_date": "2025-10-05",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/592283",
+        "bangumi_id": 592283,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/ac/ff/592283_HZp8Q.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/ac/ff/592283_HZp8Q.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/ac/ff/592283_HZp8Q.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/ac/ff/592283_HZp8Q.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/ac/ff/592283_HZp8Q.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 7,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 2,
+                "7": 0,
+                "6": 1,
+                "5": 2,
+                "4": 1,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 5.3
+        },
+        "rank": null,
+        "collection": {
+            "doing": 21
+        }
+    },
+    {
+        "primary_title": "3年Z班银八老师",
+        "all_cn_names": [
+            "3年Z班银八老师"
+        ],
+        "jp_name": "3年Z組銀八先生",
+        "begin_date": "2025-10-06",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/425208",
+        "bangumi_id": 425208,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/14/25/425208_I2233.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/14/25/425208_I2233.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/14/25/425208_I2233.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/14/25/425208_I2233.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/14/25/425208_I2233.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 376,
+            "count": {
+                "10": 11,
+                "9": 5,
+                "8": 54,
+                "7": 150,
+                "6": 117,
+                "5": 29,
+                "4": 4,
+                "3": 3,
+                "2": 0,
+                "1": 3
+            },
+            "score": 6.7
+        },
+        "rank": 3896,
+        "collection": {
+            "doing": 2259
+        }
+    },
+    {
+        "primary_title": "胖子与爱情以及过错！",
+        "all_cn_names": [
+            "胖子与爱情以及过错！"
+        ],
+        "jp_name": "デブとラブと過ちと！",
+        "begin_date": "2025-10-06",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/465803",
+        "bangumi_id": 465803,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/c0/62/465803_1EhoF.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/c0/62/465803_1EhoF.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/c0/62/465803_1EhoF.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/c0/62/465803_1EhoF.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/c0/62/465803_1EhoF.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 140,
+            "count": {
+                "10": 4,
+                "9": 3,
+                "8": 2,
+                "7": 5,
+                "6": 8,
+                "5": 15,
+                "4": 12,
+                "3": 9,
+                "2": 21,
+                "1": 61
+            },
+            "score": 3
+        },
+        "rank": 9615,
+        "collection": {
+            "doing": 199
+        }
+    },
+    {
+        "primary_title": "这里是充满笑容的职场。",
+        "all_cn_names": [
+            "这里是充满笑容的职场。"
+        ],
+        "jp_name": "笑顔のたえない職場です。",
+        "begin_date": "2025-10-06",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/475663",
+        "bangumi_id": 475663,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/11/c7/475663_1bGVv.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/11/c7/475663_1bGVv.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/11/c7/475663_1bGVv.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/11/c7/475663_1bGVv.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/11/c7/475663_1bGVv.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 314,
+            "count": {
+                "10": 5,
+                "9": 3,
+                "8": 23,
+                "7": 110,
+                "6": 113,
+                "5": 35,
+                "4": 12,
+                "3": 5,
+                "2": 3,
+                "1": 5
+            },
+            "score": 6.2
+        },
+        "rank": 6103,
+        "collection": {
+            "doing": 1505
+        }
+    },
+    {
+        "primary_title": "叹气的亡灵想隐退 第2部分",
+        "all_cn_names": [
+            "叹气的亡灵想隐退 第2部分"
+        ],
+        "jp_name": "嘆きの亡霊は引退したい 第2クール",
+        "begin_date": "2025-10-06",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/530290",
+        "bangumi_id": 530290,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/d1/0f/530290_9B7P5.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/d1/0f/530290_9B7P5.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/d1/0f/530290_9B7P5.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/d1/0f/530290_9B7P5.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/d1/0f/530290_9B7P5.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 358,
+            "count": {
+                "10": 14,
+                "9": 13,
+                "8": 44,
+                "7": 172,
+                "6": 95,
+                "5": 14,
+                "4": 2,
+                "3": 1,
+                "2": 0,
+                "1": 3
+            },
+            "score": 6.9
+        },
+        "rank": 2949,
+        "collection": {
+            "doing": 2120
+        }
+    },
+    {
+        "primary_title": "明明只是暗杀者，我的面板数值却比勇者还要强",
+        "all_cn_names": [
+            "明明只是暗杀者，我的面板数值却比勇者还要强"
+        ],
+        "jp_name": "暗殺者である俺のステータスが勇者よりも明らかに強いのだが",
+        "begin_date": "2025-10-06",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/537904",
+        "bangumi_id": 537904,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/4a/44/537904_2b515.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/4a/44/537904_2b515.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/4a/44/537904_2b515.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/4a/44/537904_2b515.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/4a/44/537904_2b515.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 536,
+            "count": {
+                "10": 5,
+                "9": 2,
+                "8": 10,
+                "7": 113,
+                "6": 195,
+                "5": 126,
+                "4": 47,
+                "3": 26,
+                "2": 6,
+                "1": 6
+            },
+            "score": 5.6
+        },
+        "rank": 8346,
+        "collection": {
+            "doing": 2785
+        }
+    },
+    {
+        "primary_title": "素材采集家的异世界旅行记",
+        "all_cn_names": [
+            "素材采集家的异世界旅行记"
+        ],
+        "jp_name": "素材採取家の異世界旅行記",
+        "begin_date": "2025-10-06",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/542777",
+        "bangumi_id": 542777,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/0b/ce/542777_9z9J6.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/0b/ce/542777_9z9J6.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/0b/ce/542777_9z9J6.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/0b/ce/542777_9z9J6.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/0b/ce/542777_9z9J6.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 164,
+            "count": {
+                "10": 3,
+                "9": 1,
+                "8": 1,
+                "7": 4,
+                "6": 13,
+                "5": 39,
+                "4": 49,
+                "3": 23,
+                "2": 17,
+                "1": 14
+            },
+            "score": 4
+        },
+        "rank": 9486,
+        "collection": {
+            "doing": 531
+        }
+    },
+    {
+        "primary_title": "恶搞之家 万圣节特别集 2025",
+        "all_cn_names": [
+            "恶搞之家 万圣节特别集 2025"
+        ],
+        "jp_name": "Family Guy Halloween Special 2025",
+        "begin_date": "2025-10-06",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/592268",
+        "bangumi_id": 592268,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/c5/67/592268_7xOjd.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/c5/67/592268_7xOjd.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/c5/67/592268_7xOjd.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/c5/67/592268_7xOjd.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/c5/67/592268_7xOjd.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 1,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 1,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 5
+        },
+        "rank": null,
+        "collection": {}
+    },
+    {
+        "primary_title": "拥有超常技能的异世界流浪美食家 第二季",
+        "all_cn_names": [
+            "拥有超常技能的异世界流浪美食家 第二季"
+        ],
+        "jp_name": "とんでもスキルで異世界放浪メシ2",
+        "begin_date": "2025-10-07",
+        "weekday": "周二",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/462459",
+        "bangumi_id": 462459,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/ea/94/462459_B9dob.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/ea/94/462459_B9dob.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/ea/94/462459_B9dob.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/ea/94/462459_B9dob.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/ea/94/462459_B9dob.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 263,
+            "count": {
+                "10": 6,
+                "9": 3,
+                "8": 28,
+                "7": 129,
+                "6": 67,
+                "5": 25,
+                "4": 3,
+                "3": 0,
+                "2": 0,
+                "1": 2
+            },
+            "score": 6.7
+        },
+        "rank": 3835,
+        "collection": {
+            "doing": 1608
+        }
+    },
+    {
+        "primary_title": "弹珠汽水瓶里的千岁同学",
+        "all_cn_names": [
+            "弹珠汽水瓶里的千岁同学"
+        ],
+        "jp_name": "千歳くんはラムネ瓶のなか",
+        "begin_date": "2025-10-07",
+        "weekday": "周二",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/507634",
+        "bangumi_id": 507634,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/7a/e8/507634_i9u9F.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/7a/e8/507634_i9u9F.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/7a/e8/507634_i9u9F.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/7a/e8/507634_i9u9F.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/7a/e8/507634_i9u9F.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 1800,
+            "count": {
+                "10": 48,
+                "9": 16,
+                "8": 61,
+                "7": 168,
+                "6": 340,
+                "5": 395,
+                "4": 297,
+                "3": 152,
+                "2": 108,
+                "1": 215
+            },
+            "score": 4.7
+        },
+        "rank": 9497,
+        "collection": {
+            "doing": 5457
+        }
+    },
+    {
+        "primary_title": "忍者与极道",
+        "all_cn_names": [
+            "忍者与极道"
+        ],
+        "jp_name": "忍者と極道",
+        "begin_date": "2025-10-07",
+        "weekday": "周二",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/539341",
+        "bangumi_id": 539341,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/aa/68/539341_Vp64n.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/aa/68/539341_Vp64n.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/aa/68/539341_Vp64n.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/aa/68/539341_Vp64n.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/aa/68/539341_Vp64n.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 227,
+            "count": {
+                "10": 1,
+                "9": 2,
+                "8": 6,
+                "7": 45,
+                "6": 107,
+                "5": 31,
+                "4": 19,
+                "3": 8,
+                "2": 3,
+                "1": 5
+            },
+            "score": 5.7
+        },
+        "rank": 7674,
+        "collection": {
+            "doing": 895
+        }
+    },
+    {
+        "primary_title": "陛下请忘记我吧",
+        "all_cn_names": [
+            "陛下请忘记我吧"
+        ],
+        "jp_name": "陛下わたしを忘れてください",
+        "begin_date": "2025-10-07",
+        "weekday": "周二",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/582324",
+        "bangumi_id": 582324,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/68/c2/582324_AdM5F.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/68/c2/582324_AdM5F.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/68/c2/582324_AdM5F.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/68/c2/582324_AdM5F.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/68/c2/582324_AdM5F.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 13,
+            "count": {
+                "10": 1,
+                "9": 1,
+                "8": 0,
+                "7": 0,
+                "6": 2,
+                "5": 3,
+                "4": 2,
+                "3": 1,
+                "2": 1,
+                "1": 2
+            },
+            "score": 4.7
+        },
+        "rank": null,
+        "collection": {
+            "doing": 40
+        }
+    },
+    {
+        "primary_title": "2200年ねこの国ニッポン",
+        "all_cn_names": [],
+        "jp_name": "2200年ねこの国ニッポン",
+        "begin_date": "2025-10-07",
+        "weekday": "周二",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/588612",
+        "bangumi_id": 588612,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/a7/12/588612_ffmeg.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/a7/12/588612_ffmeg.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/a7/12/588612_ffmeg.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/a7/12/588612_ffmeg.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/a7/12/588612_ffmeg.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 3,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 0,
+                "4": 0,
+                "3": 0,
+                "2": 2,
+                "1": 1
+            },
+            "score": 1.7
+        },
+        "rank": null,
+        "collection": {
+            "doing": 13
+        }
+    },
+    {
+        "primary_title": "转生恶女的黑历史",
+        "all_cn_names": [
+            "转生恶女的黑历史"
+        ],
+        "jp_name": "転生悪女の黒歴史",
+        "begin_date": "2025-10-08",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/480832",
+        "bangumi_id": 480832,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/16/0e/480832_4dmH9.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/16/0e/480832_4dmH9.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/16/0e/480832_4dmH9.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/16/0e/480832_4dmH9.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/16/0e/480832_4dmH9.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 163,
+            "count": {
+                "10": 2,
+                "9": 1,
+                "8": 4,
+                "7": 17,
+                "6": 59,
+                "5": 55,
+                "4": 14,
+                "3": 8,
+                "2": 0,
+                "1": 3
+            },
+            "score": 5.5
+        },
+        "rank": 8098,
+        "collection": {
+            "doing": 717
+        }
+    },
+    {
+        "primary_title": "绝妙舞步",
+        "all_cn_names": [
+            "绝妙舞步"
+        ],
+        "jp_name": "ワンダンス",
+        "begin_date": "2025-10-08",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/508958",
+        "bangumi_id": 508958,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/d1/3c/508958_gMfH8.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/d1/3c/508958_gMfH8.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/d1/3c/508958_gMfH8.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/d1/3c/508958_gMfH8.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/d1/3c/508958_gMfH8.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 296,
+            "count": {
+                "10": 4,
+                "9": 1,
+                "8": 3,
+                "7": 14,
+                "6": 70,
+                "5": 69,
+                "4": 69,
+                "3": 41,
+                "2": 6,
+                "1": 19
+            },
+            "score": 4.6
+        },
+        "rank": 9393,
+        "collection": {
+            "doing": 870
+        }
+    },
+    {
+        "primary_title": "どこでもマキバオー ～ワールドツアー～",
+        "all_cn_names": [],
+        "jp_name": "どこでもマキバオー ～ワールドツアー～",
+        "begin_date": "2025-10-08",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/592911",
+        "bangumi_id": 592911,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/ed/30/592911_39QGp.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/ed/30/592911_39QGp.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/ed/30/592911_39QGp.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/ed/30/592911_39QGp.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/ed/30/592911_39QGp.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 2,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 0,
+                "4": 1,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 2.5
+        },
+        "rank": null,
+        "collection": {
+            "doing": 2
+        }
+    },
+    {
+        "primary_title": "SO BAD",
+        "all_cn_names": [],
+        "jp_name": "SO BAD",
+        "begin_date": "2025-10-09",
+        "weekday": "周四",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/593405",
+        "bangumi_id": 593405,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/bd/37/593405_vAkAk.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/bd/37/593405_vAkAk.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/bd/37/593405_vAkAk.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/bd/37/593405_vAkAk.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/bd/37/593405_vAkAk.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 17,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 1,
+                "7": 7,
+                "6": 5,
+                "5": 3,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 6.1
+        },
+        "rank": null,
+        "collection": {
+            "doing": 4
+        }
+    },
+    {
+        "primary_title": "古诺希亚",
+        "all_cn_names": [
+            "古诺希亚"
+        ],
+        "jp_name": "グノーシア",
+        "begin_date": "2025-10-11",
+        "weekday": "周六",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/526448",
+        "bangumi_id": 526448,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/17/82/526448_ssr71.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/17/82/526448_ssr71.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/17/82/526448_ssr71.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/17/82/526448_ssr71.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/17/82/526448_ssr71.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 843,
+            "count": {
+                "10": 20,
+                "9": 39,
+                "8": 380,
+                "7": 309,
+                "6": 53,
+                "5": 30,
+                "4": 4,
+                "3": 3,
+                "2": 0,
+                "1": 5
+            },
+            "score": 7.4
+        },
+        "rank": 1123,
+        "collection": {
+            "doing": 3959
+        }
+    },
+    {
+        "primary_title": "一拳超人 第三季",
+        "all_cn_names": [
+            "一拳超人 第三季"
+        ],
+        "jp_name": "ワンパンマン 第3期",
+        "begin_date": "2025-10-12",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/285757",
+        "bangumi_id": 285757,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/5a/63/285757_VvaRn.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/5a/63/285757_VvaRn.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/5a/63/285757_VvaRn.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/5a/63/285757_VvaRn.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/5a/63/285757_VvaRn.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 650,
+            "count": {
+                "10": 12,
+                "9": 4,
+                "8": 44,
+                "7": 108,
+                "6": 195,
+                "5": 124,
+                "4": 92,
+                "3": 33,
+                "2": 14,
+                "1": 24
+            },
+            "score": 5.5
+        },
+        "rank": 8686,
+        "collection": {
+            "doing": 3998
+        }
+    },
+    {
+        "primary_title": "不擅吸血的吸血鬼",
+        "all_cn_names": [
+            "不擅吸血的吸血鬼"
+        ],
+        "jp_name": "ちゃんと吸えない吸血鬼ちゃん",
+        "begin_date": "2025-10-12",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/536102",
+        "bangumi_id": 536102,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/11/05/536102_Gohth.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/11/05/536102_Gohth.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/11/05/536102_Gohth.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/11/05/536102_Gohth.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/11/05/536102_Gohth.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 309,
+            "count": {
+                "10": 2,
+                "9": 4,
+                "8": 15,
+                "7": 102,
+                "6": 120,
+                "5": 51,
+                "4": 7,
+                "3": 2,
+                "2": 1,
+                "1": 5
+            },
+            "score": 6.2
+        },
+        "rank": 6396,
+        "collection": {
+            "doing": 1731
+        }
+    },
+    {
+        "primary_title": "魔法少女小圆 起始的物语&amp;永远的物语 TV剪辑版",
+        "all_cn_names": [
+            "魔法少女小圆 起始的物语&amp;永远的物语 TV剪辑版"
+        ],
+        "jp_name": "魔法少女まどか☆マギカ 始まりの物語／永遠の物語 TV Edition",
+        "begin_date": "2025-10-12",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/579701",
+        "bangumi_id": 579701,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/42/b1/579701_eLN35.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/42/b1/579701_eLN35.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/42/b1/579701_eLN35.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/42/b1/579701_eLN35.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/42/b1/579701_eLN35.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 39,
+            "count": {
+                "10": 7,
+                "9": 5,
+                "8": 12,
+                "7": 5,
+                "6": 2,
+                "5": 2,
+                "4": 1,
+                "3": 1,
+                "2": 1,
+                "1": 3
+            },
+            "score": 7.2
+        },
+        "rank": null,
+        "collection": {
+            "doing": 228
+        }
+    },
+    {
+        "primary_title": "外星也难民 第六季",
+        "all_cn_names": [
+            "外星也难民 第六季"
+        ],
+        "jp_name": "Solar Opposites Season 6",
+        "begin_date": "2025-10-13",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/505980",
+        "bangumi_id": 505980,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/10/2d/505980_dyW1e.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/10/2d/505980_dyW1e.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/10/2d/505980_dyW1e.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/10/2d/505980_dyW1e.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/10/2d/505980_dyW1e.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 2,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 2,
+                "5": 0,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 6
+        },
+        "rank": null,
+        "collection": {
+            "doing": 6
+        }
+    },
+    {
+        "primary_title": "异世界四重奏 第三季",
+        "all_cn_names": [
+            "异世界四重奏 第三季"
+        ],
+        "jp_name": "異世界かるてっと3",
+        "begin_date": "2025-10-13",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/564421",
+        "bangumi_id": 564421,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/0a/ca/564421_em83Z.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/0a/ca/564421_em83Z.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/0a/ca/564421_em83Z.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/0a/ca/564421_em83Z.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/0a/ca/564421_em83Z.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 125,
+            "count": {
+                "10": 1,
+                "9": 2,
+                "8": 13,
+                "7": 59,
+                "6": 41,
+                "5": 5,
+                "4": 1,
+                "3": 0,
+                "2": 1,
+                "1": 2
+            },
+            "score": 6.6
+        },
+        "rank": 3883,
+        "collection": {
+            "doing": 947
+        }
+    },
+    {
+        "primary_title": "最后的决战",
+        "all_cn_names": [
+            "最后的决战"
+        ],
+        "jp_name": "最後の決戦",
+        "begin_date": "2025-10-13",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/594062",
+        "bangumi_id": 594062,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/f1/0f/594062_zH1GH.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/f1/0f/594062_zH1GH.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/f1/0f/594062_zH1GH.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/f1/0f/594062_zH1GH.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/f1/0f/594062_zH1GH.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 12,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 1,
+                "7": 0,
+                "6": 1,
+                "5": 6,
+                "4": 1,
+                "3": 1,
+                "2": 0,
+                "1": 2
+            },
+            "score": 4.4
+        },
+        "rank": null,
+        "collection": {
+            "doing": 5
+        }
+    },
+    {
+        "primary_title": "数码宝贝物语 时空异客 序章",
+        "all_cn_names": [
+            "数码宝贝物语 时空异客 序章"
+        ],
+        "jp_name": "デジモンストーリー タイムストレンジャー Prelude",
+        "begin_date": "2025-10-13",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/594551",
+        "bangumi_id": 594551,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/89/36/594551_9Vs96.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/89/36/594551_9Vs96.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/89/36/594551_9Vs96.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/89/36/594551_9Vs96.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/89/36/594551_9Vs96.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 13,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 1,
+                "7": 1,
+                "6": 7,
+                "5": 1,
+                "4": 1,
+                "3": 0,
+                "2": 1,
+                "1": 1
+            },
+            "score": 5.3
+        },
+        "rank": null,
+        "collection": {
+            "doing": 4
+        }
+    },
+    {
+        "primary_title": "最终测试",
+        "all_cn_names": [
+            "最终测试"
+        ],
+        "jp_name": "THE FINAL TEST",
+        "begin_date": "2025-10-13",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/595686",
+        "bangumi_id": 595686,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/71/89/595686_Bz70B.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/71/89/595686_Bz70B.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/71/89/595686_Bz70B.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/71/89/595686_Bz70B.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/71/89/595686_Bz70B.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 9,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 2,
+                "6": 3,
+                "5": 3,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 5.3
+        },
+        "rank": null,
+        "collection": {
+            "doing": 3
+        }
+    },
+    {
+        "primary_title": "细胞分裂：死亡守望",
+        "all_cn_names": [
+            "细胞分裂：死亡守望"
+        ],
+        "jp_name": "Splinter Cell: Deathwatch",
+        "begin_date": "2025-10-14",
+        "weekday": "周二",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/513885",
+        "bangumi_id": 513885,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/11/a7/513885_POBI5.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/11/a7/513885_POBI5.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/11/a7/513885_POBI5.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/11/a7/513885_POBI5.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/11/a7/513885_POBI5.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 9,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 1,
+                "5": 3,
+                "4": 3,
+                "3": 1,
+                "2": 0,
+                "1": 1
+            },
+            "score": 4.1
+        },
+        "rank": null,
+        "collection": {
+            "doing": 4
+        }
+    },
+    {
+        "primary_title": "跨越种族与你相恋",
+        "all_cn_names": [
+            "跨越种族与你相恋"
+        ],
+        "jp_name": "キミと越えて恋になる",
+        "begin_date": "2025-10-14",
+        "weekday": "周二",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/532940",
+        "bangumi_id": 532940,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/cc/27/532940_LE79k.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/cc/27/532940_LE79k.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/cc/27/532940_LE79k.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/cc/27/532940_LE79k.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/cc/27/532940_LE79k.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 106,
+            "count": {
+                "10": 5,
+                "9": 1,
+                "8": 5,
+                "7": 14,
+                "6": 20,
+                "5": 37,
+                "4": 10,
+                "3": 3,
+                "2": 1,
+                "1": 10
+            },
+            "score": 5.3
+        },
+        "rank": 7984,
+        "collection": {
+            "doing": 381
+        }
+    },
+    {
+        "primary_title": "天相",
+        "all_cn_names": [],
+        "jp_name": "天相",
+        "begin_date": "2025-10-15",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/403740",
+        "bangumi_id": 403740,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/32/2e/403740_8taeY.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/32/2e/403740_8taeY.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/32/2e/403740_8taeY.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/32/2e/403740_8taeY.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/32/2e/403740_8taeY.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 2,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 2,
+                "5": 0,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 6
+        },
+        "rank": null,
+        "collection": {
+            "doing": 12
+        }
+    },
+    {
+        "primary_title": "会动的！从前从前有只猫 世界喵童话",
+        "all_cn_names": [
+            "会动的！从前从前有只猫 世界喵童话"
+        ],
+        "jp_name": "うごく！ねこむかしばなし",
+        "begin_date": "2025-10-15",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/535897",
+        "bangumi_id": 535897,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/73/c3/535897_sz0Y0.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/73/c3/535897_sz0Y0.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/73/c3/535897_sz0Y0.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/73/c3/535897_sz0Y0.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/73/c3/535897_sz0Y0.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 21,
+            "count": {
+                "10": 0,
+                "9": 1,
+                "8": 1,
+                "7": 9,
+                "6": 6,
+                "5": 2,
+                "4": 1,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 6.2
+        },
+        "rank": null,
+        "collection": {
+            "doing": 116
+        }
+    },
+    {
+        "primary_title": "南方公园 第28季",
+        "all_cn_names": [
+            "南方公园 第28季"
+        ],
+        "jp_name": "South Park season 28",
+        "begin_date": "2025-10-15",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/601465",
+        "bangumi_id": 601465,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/51/28/601465_1m9sB.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/51/28/601465_1m9sB.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/51/28/601465_1m9sB.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/51/28/601465_1m9sB.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/51/28/601465_1m9sB.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 1,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 1,
+                "5": 0,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 6
+        },
+        "rank": null,
+        "collection": {
+            "doing": 5
+        }
+    },
+    {
+        "primary_title": "微かな夕阳 / 魔法少女ホロウィッチ！",
+        "all_cn_names": [],
+        "jp_name": "微かな夕阳 / 魔法少女ホロウィッチ！",
+        "begin_date": "2025-10-17",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/598053",
+        "bangumi_id": 598053,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/fb/c7/598053_Mz1MX.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/fb/c7/598053_Mz1MX.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/fb/c7/598053_Mz1MX.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/fb/c7/598053_Mz1MX.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/fb/c7/598053_Mz1MX.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 10,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 3,
+                "5": 5,
+                "4": 1,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 4.8
+        },
+        "rank": null,
+        "collection": {
+            "doing": 1
+        }
+    },
+    {
+        "primary_title": "The Twits",
+        "all_cn_names": [],
+        "jp_name": "The Twits",
+        "begin_date": "2025-10-17",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/598140",
+        "bangumi_id": 598140,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/8b/86/598140_uPplB.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/8b/86/598140_uPplB.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/8b/86/598140_uPplB.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/8b/86/598140_uPplB.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/8b/86/598140_uPplB.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 1,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 0,
+                "4": 1,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 4
+        },
+        "rank": null,
+        "collection": {
+            "doing": 1
+        }
+    },
+    {
+        "primary_title": "牧神记3",
+        "all_cn_names": [
+            "牧神记3"
+        ],
+        "jp_name": "牧神记 叁",
+        "begin_date": "2025-10-19",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/587256",
+        "bangumi_id": 587256,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/c0/32/587256_kj81c.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/c0/32/587256_kj81c.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/c0/32/587256_kj81c.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/c0/32/587256_kj81c.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/c0/32/587256_kj81c.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 21,
+            "count": {
+                "10": 1,
+                "9": 0,
+                "8": 3,
+                "7": 11,
+                "6": 6,
+                "5": 0,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 7
+        },
+        "rank": null,
+        "collection": {
+            "doing": 125
+        }
+    },
+    {
+        "primary_title": "怪物弹珠 DEADVERSE RELOADED",
+        "all_cn_names": [
+            "怪物弹珠 DEADVERSE RELOADED"
+        ],
+        "jp_name": "モンスターストライク デッドバースリローデッド",
+        "begin_date": "2025-10-21",
+        "weekday": "周二",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/570330",
+        "bangumi_id": 570330,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/4f/da/570330_W93JH.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/4f/da/570330_W93JH.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/4f/da/570330_W93JH.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/4f/da/570330_W93JH.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/4f/da/570330_W93JH.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 7,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 1,
+                "6": 2,
+                "5": 1,
+                "4": 2,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 4.7
+        },
+        "rank": null,
+        "collection": {
+            "doing": 55
+        }
+    },
+    {
+        "primary_title": "魔法吉伊卡哇",
+        "all_cn_names": [
+            "魔法吉伊卡哇"
+        ],
+        "jp_name": "まじかるちいかわ",
+        "begin_date": "2025-10-21",
+        "weekday": "周二",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/599527",
+        "bangumi_id": 599527,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/10/8b/599527_TiQU8.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/10/8b/599527_TiQU8.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/10/8b/599527_TiQU8.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/10/8b/599527_TiQU8.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/10/8b/599527_TiQU8.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 18,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 2,
+                "7": 9,
+                "6": 3,
+                "5": 2,
+                "4": 1,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 6.2
+        },
+        "rank": null,
+        "collection": {
+            "doing": 1
+        }
+    },
+    {
+        "primary_title": "Run Run Lantern",
+        "all_cn_names": [],
+        "jp_name": "Run Run Lantern",
+        "begin_date": "2025-10-22",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/599919",
+        "bangumi_id": 599919,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/ee/e6/599919_4gqzQ.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/ee/e6/599919_4gqzQ.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/ee/e6/599919_4gqzQ.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/ee/e6/599919_4gqzQ.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/ee/e6/599919_4gqzQ.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 73,
+            "count": {
+                "10": 2,
+                "9": 0,
+                "8": 10,
+                "7": 30,
+                "6": 25,
+                "5": 5,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 1
+            },
+            "score": 6.7
+        },
+        "rank": 3366,
+        "collection": {
+            "doing": 5
+        }
+    },
+    {
+        "primary_title": "「人生讚歌」Official Music Video",
+        "all_cn_names": [],
+        "jp_name": "「人生讚歌」Official Music Video",
+        "begin_date": "2025-10-22",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/600956",
+        "bangumi_id": 600956,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/99/85/600956_z0PGF.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/99/85/600956_z0PGF.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/99/85/600956_z0PGF.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/99/85/600956_z0PGF.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/99/85/600956_z0PGF.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 1,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 1,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 5
+        },
+        "rank": null,
+        "collection": {}
+    },
+    {
+        "primary_title": "探险时光：菲奥娜与蛋糕 第二季",
+        "all_cn_names": [
+            "探险时光：菲奥娜与蛋糕 第二季"
+        ],
+        "jp_name": "Adventure Time: Fionna &amp; Cake Season 2",
+        "begin_date": "2025-10-23",
+        "weekday": "周四",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/469280",
+        "bangumi_id": 469280,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/6f/b0/469280_OmYfH.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/6f/b0/469280_OmYfH.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/6f/b0/469280_OmYfH.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/6f/b0/469280_OmYfH.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/6f/b0/469280_OmYfH.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {},
+        "rank": null,
+        "collection": {
+            "doing": 11
+        }
+    },
+    {
+        "primary_title": "MELLOW DEAR US「Dear World」あんさんぶるスターズ！！masterpieceMVseries vol.12",
+        "all_cn_names": [],
+        "jp_name": "MELLOW DEAR US「Dear World」あんさんぶるスターズ！！masterpieceMVseries vol.12",
+        "begin_date": "2025-10-24",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/600974",
+        "bangumi_id": 600974,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/91/d8/600974_7x8cg.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/91/d8/600974_7x8cg.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/91/d8/600974_7x8cg.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/91/d8/600974_7x8cg.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/91/d8/600974_7x8cg.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 1,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 1,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 5
+        },
+        "rank": null,
+        "collection": {}
+    },
+    {
+        "primary_title": "MrBeast Lab",
+        "all_cn_names": [],
+        "jp_name": "MrBeast Lab",
+        "begin_date": "2025-10-26",
+        "weekday": "周日",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/574042",
+        "bangumi_id": 574042,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/15/e4/574042_44040.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/15/e4/574042_44040.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/15/e4/574042_44040.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/15/e4/574042_44040.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/15/e4/574042_44040.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {},
+        "rank": null,
+        "collection": {}
+    },
+    {
+        "primary_title": "仙帝归来",
+        "all_cn_names": [
+            "仙帝归来"
+        ],
+        "jp_name": "仙帝归来",
+        "begin_date": "2025-10-27",
+        "weekday": "周一",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/456170",
+        "bangumi_id": 456170,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/40/e5/456170_vo8Fg.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/40/e5/456170_vo8Fg.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/40/e5/456170_vo8Fg.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/40/e5/456170_vo8Fg.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/40/e5/456170_vo8Fg.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 3,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 2,
+                "5": 0,
+                "4": 0,
+                "3": 0,
+                "2": 1,
+                "1": 0
+            },
+            "score": 4.7
+        },
+        "rank": null,
+        "collection": {
+            "doing": 12
+        }
+    },
+    {
+        "primary_title": "迪士尼 扭曲仙境",
+        "all_cn_names": [
+            "迪士尼 扭曲仙境"
+        ],
+        "jp_name": "ディズニー ツイステッドワンダーランド ザ アニメーション エピソード オブ ハーツラビュル",
+        "begin_date": "2025-10-29",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/352777",
+        "bangumi_id": 352777,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/96/b1/352777_89O7W.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/96/b1/352777_89O7W.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/96/b1/352777_89O7W.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/96/b1/352777_89O7W.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/96/b1/352777_89O7W.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 14,
+            "count": {
+                "10": 1,
+                "9": 0,
+                "8": 0,
+                "7": 1,
+                "6": 4,
+                "5": 2,
+                "4": 3,
+                "3": 1,
+                "2": 0,
+                "1": 2
+            },
+            "score": 4.9
+        },
+        "rank": null,
+        "collection": {
+            "doing": 103
+        }
+    },
+    {
+        "primary_title": "地狱客栈 第2季",
+        "all_cn_names": [
+            "地狱客栈 第2季"
+        ],
+        "jp_name": "Hazbin Hotel Season 2",
+        "begin_date": "2025-10-29",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/457549",
+        "bangumi_id": 457549,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/fe/b5/457549_UlHNl.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/fe/b5/457549_UlHNl.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/fe/b5/457549_UlHNl.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/fe/b5/457549_UlHNl.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/fe/b5/457549_UlHNl.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 8,
+            "count": {
+                "10": 1,
+                "9": 0,
+                "8": 1,
+                "7": 2,
+                "6": 2,
+                "5": 1,
+                "4": 0,
+                "3": 0,
+                "2": 1,
+                "1": 0
+            },
+            "score": 6.4
+        },
+        "rank": null,
+        "collection": {
+            "doing": 31
+        }
+    },
+    {
+        "primary_title": "星球大战：幻境 第三季",
+        "all_cn_names": [
+            "星球大战：幻境 第三季"
+        ],
+        "jp_name": "Star Wars: Visions Volume 3",
+        "begin_date": "2025-10-29",
+        "weekday": "周三",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/524894",
+        "bangumi_id": 524894,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/df/a7/524894_7gJji.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/df/a7/524894_7gJji.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/df/a7/524894_7gJji.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/df/a7/524894_7gJji.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/df/a7/524894_7gJji.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 19,
+            "count": {
+                "10": 1,
+                "9": 0,
+                "8": 4,
+                "7": 7,
+                "6": 2,
+                "5": 4,
+                "4": 1,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 6.7
+        },
+        "rank": null,
+        "collection": {
+            "doing": 50
+        }
+    },
+    {
+        "primary_title": "曾经有勇士",
+        "all_cn_names": [
+            "曾经有勇士"
+        ],
+        "jp_name": "曾经有勇士",
+        "begin_date": "2025-10-31",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/453311",
+        "bangumi_id": 453311,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/84/47/453311_oiEji.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/84/47/453311_oiEji.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/84/47/453311_oiEji.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/84/47/453311_oiEji.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/84/47/453311_oiEji.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 1,
+            "count": {
+                "10": 0,
+                "9": 0,
+                "8": 0,
+                "7": 0,
+                "6": 1,
+                "5": 0,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 6
+        },
+        "rank": null,
+        "collection": {
+            "doing": 4
+        }
+    },
+    {
+        "primary_title": "我推的偶像变成部下了",
+        "all_cn_names": [
+            "我推的偶像变成部下了"
+        ],
+        "jp_name": "推しが部下になりました",
+        "begin_date": "2025-10-31",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/589808",
+        "bangumi_id": 589808,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/c2/0b/589808_ANNpP.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/c2/0b/589808_ANNpP.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/c2/0b/589808_ANNpP.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/c2/0b/589808_ANNpP.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/c2/0b/589808_ANNpP.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 2,
+            "count": {
+                "10": 0,
+                "9": 1,
+                "8": 0,
+                "7": 0,
+                "6": 0,
+                "5": 1,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 7
+        },
+        "rank": null,
+        "collection": {
+            "doing": 15
+        }
+    },
+    {
+        "primary_title": "ザ・レンチキュラーズ",
+        "all_cn_names": [],
+        "jp_name": "ザ・レンチキュラーズ",
+        "begin_date": "2025-10-31",
+        "weekday": "周五",
+        "begin_time": "00:00",
+        "site": "http://bgm.tv/subject/600890",
+        "bangumi_id": 600890,
+        "images": {
+            "large": "http://lain.bgm.tv/pic/cover/l/b9/0f/600890_moq5F.jpg",
+            "common": "http://lain.bgm.tv/pic/cover/c/b9/0f/600890_moq5F.jpg",
+            "medium": "http://lain.bgm.tv/pic/cover/m/b9/0f/600890_moq5F.jpg",
+            "small": "http://lain.bgm.tv/pic/cover/s/b9/0f/600890_moq5F.jpg",
+            "grid": "http://lain.bgm.tv/pic/cover/g/b9/0f/600890_moq5F.jpg"
+        },
+        "summary": "",
+        "eps_count": 0,
+        "rating": {
+            "total": 24,
+            "count": {
+                "10": 0,
+                "9": 1,
+                "8": 3,
+                "7": 9,
+                "6": 10,
+                "5": 1,
+                "4": 0,
+                "3": 0,
+                "2": 0,
+                "1": 0
+            },
+            "score": 6.7
+        },
+        "rank": null,
+        "collection": {
+            "doing": 143
+        }
+    }
+]

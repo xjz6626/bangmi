@@ -10,16 +10,16 @@ anime/
 *.log
 data/scheduler.log
 
-# 运行时生成的 JSON 数据文件
-data/search_results.json
-data/download_history.json
-data/seasonal_anime_list.json
-data/watchlist.json
-data/api_raw_response.json
+# 运行时生成的 JSON 数据文件 - 注释掉，允许上传
+# data/search_results.json
+# data/download_history.json
+# data/seasonal_anime_list.json
+# data/watchlist.json
+# data/api_raw_response.json
 
-# 配置文件（包含敏感信息）
-data/config.json
-data/config.json.local
+# 配置文件 - 注释掉，允许上传（私有仓库）
+# data/config.json
+# data/config.json.local
 
 # Python
 __pycache__/
